@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacje</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - animacje CSS">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+        <nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Animacje CSS</h2>
+                <p><strong>Animacje CSS</strong> pozwalają na tworzenie efektów animacji bez użycia JavaScript. Można animować różne właściwości CSS, takie jak kolor, pozycja, rozmiar i wiele innych. Animacje są definiowane za pomocą reguły <strong>@keyframes</strong> i są dołączone do elementów za pomocą włąściwości <strong>animation</strong>.</p>
+            </div>
+            <div class="backgr">
+                <h2>@keyframes</h2>
+                <p>Reguła <strong>@keyframes</strong> pozwala na zdefiniowanie animacji - określa się jej różne etapy i przypisuje im wartości właściwości CSS. Nazwa animacji może być zawarta w nawiasach lub bez nich. Jest to sama animacja, którą można zastosować w wielu elementach.</p>
+                <pre><code><strong>@keyframes</strong> nazwa-animacji {
+    0% {
+        transform: translate(20px, 30px);
+        background-color: red;
+    }
+    50% {
+        transform: rotate(45deg);
+        background-color: blue;
+    }
+    100% {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
+}
+<strong>@keyframes</strong> nazwa-animacji2 {
+    from {
+        transform: translate(20px, 30px);
+        background-color: red;
+    }
+    to {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Transformacje i przejścia</h2>
+                <p><strong>Transform</strong> - właściwość umieszczana w <strong>@keyframes</strong> lub w danym elemencie. Powoduje, że element zmienia swoją pozycję, rozmiar lub kierunek. Przykładowe wartości:</p>
+                <ul>
+                    <li><strong>translateX(x)</strong> - przesuwa element w poziomie</li>
+                    <li><strong>translateY(y)</strong> - przesuwa element w pionie</li>
+                    <li><strong>translate(x, y)</strong> - przesuwa element w poziomie i pionie</li>
+                    <li><strong>rotate(kąt)</strong> - obraca element o dany kąt</li>
+                    <li><strong>scaleX(x)</strong> - skaluje element w poziomie</li>
+                    <li><strong>scaleY(y)</strong> - skaluje element w pionie</li>
+                    <li><strong>scale(x, y)</strong> - skaluje element w poziomie i pionie</li>
+                    <li><strong>skewX(kątX)</strong> - przekrzywia element w poziomie</li>
+                    <li><strong>skewY(kątY)</strong> - przekrzywia element w pionie</li>
+                    <li><strong>skew(kątX, kątY)</strong> - przekrzywia element w poziomie i pionie</li>
+                </ul>
+                <pre><code>.element {
+    transform: translateX(10px);
+    transform: rotate(45deg);
+    transform: scale(1.5);
+}</code></pre>
+                <p><strong>Transition</strong> - właściwość przejścia. Można użyć jej m.in. do określenia czasu trwania przejścia.</p>
+                <ol>
+                    <li><strong>transition-property</strong> - określa nazwę właściwości CSS, dla której jest efekt przejścia
+                    <ul>
+                        <li><strong>all</strong> - przejście dotyczy wszystkich właściwości CSS</li>
+                        <li><strong>nazwa-właściwości</strong> - przejście dotyczy tylko tej właściwości CSS (np. background-color, width)</li>
+                        <li><strong>none</strong> - brak przejścia</li>
+                    </ul></li>
+                    <li><strong>transition-duration</strong> - określa czas trwania przejścia</li>
+                    <li><strong>transition-timing-function</strong> - określa krzywą prędkości przejścia
+                    <ul>
+                        <li><strong>linear</strong> - animacja przebiega równomiernie</li>
+                        <li><strong>ease</strong> - animacja zaczyna się powoli, przyspiesza, a następnie zwalnia</li>
+                        <li><strong>ease-in</strong> - animacja zaczyna się powoli i przyspiesza</li>
+                        <li><strong>ease-out</strong> - animacja zaczyna się szybko i zwalnia</li>
+                        <li><strong>ease-in-out</strong> - animacja zwalnia na początku i na końcu</li>
+                        <li><strong>cubic-bezier(n1, n2, n3, n4)</strong> - animacja przebiega zgodnie z krzywą określoną przez cztery wartości 0-1 (np. cubic-bezier(0.25, 0.1, 0.25, 1))</li>
+                    </ul></li>
+                    <li><strong>transition-delay</strong> - określa opóźnienie rozpoczęcia przejścia</li>
+                    <li><strong>transition</strong> - skrót dla wszystkich właściwości przejścia</li>
+                </ol>
+                <pre><code>div {
+    width: 100px;
+    transition: width 2s;
+}
+div:hover {
+    width: 300px;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>animation</h2>
+                <p>Właściwość <strong>animation</strong> pozwala na zastosowanie animacji do elementu.</p>
+                <ol>
+                    <li><strong>animation-name</strong> - określa nazwę animacji zdefiniowanej w <strong>@keyframes</strong></li>
+                    <li><strong>animation-duration</strong> - określa czas trwania animacji</li>
+                    <li><strong>animation-timing-function</strong> - określa krzywą prędkości animacji
+                    <ul>
+                        <li><strong>linear</strong></li>
+                        <li><strong>ease</strong></li>
+                        <li><strong>ease-in</strong></li>
+                        <li><strong>ease-out</strong></li>
+                        <li><strong>ease-in-out</strong></li>
+                        <li><strong>cubic-bezier(n1, n2, n3, n4)</strong></li>
+                    </ul></li>
+                    <li><strong>animation-delay</strong> - określa opóźnienie rozpoczęcia animacji</li>
+                    <li><strong>animation-iteration-count</strong> - określa liczbę powtórzeń animacji
+                    <ul>
+                        <li><strong>numer</strong></li>
+                        <li><strong>infinite</strong> - animacja powtarza się w nieskończoność</li>
+                    </ul></li>
+                    <li><strong>animation-direction</strong> - określa kierunek animacji
+                    <ul>
+                        <li><strong>normal</strong> - animacja odtwarza się w normalnym kierunku</li>
+                        <li><strong>reverse</strong> - animacja odtwarza się w odwrotnym kierunku</li>
+                        <li><strong>alternate</strong> - animacja odtwarza się w normalnym kierunku, a następnie w odwrotnym</li>
+                        <li><strong>alternate-reverse</strong> - animacja odtwarza się w odwrotnym kierunku, a następnie w normalnym</li>
+                    </ul></li>
+                    <li><strong>animation</strong> - skrót dla wszystkich właściwości animacji</li>
+                </ol>
+                <pre><code>.element1 {
+    animation-name: nazwa-animacji;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.element2 {
+    animation: nazwa-animacji 2s ease-in-out 1s infinite alternate;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Jak użyć animacji?</h2>
+                <pre><code>@keyframes zmianakoloru {
+    from {
+    background-color: red;
+    }
+    to {
+    background-color: yellow;
+    }
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: zmianakoloru;
+    animation-duration: 2s;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Przykład animacji</h2>
+                <div id="anim">
+                    Animacja
+                </div>
+            </div>
+        </main>
+        </div>
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

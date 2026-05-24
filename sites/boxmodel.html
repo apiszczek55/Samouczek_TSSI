@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model pudełkowy w CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - model pudełkowy">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Model pudełkowy</h2>
+                <p>Model pudełkowy to sposób, w jaki przeglądarka wyświetla elementy HTML. Składa się z:</p>
+                <ol>
+                    <li><strong>zawartości (content)</strong> - miejsce, gdzie znajduje się treść elementu</li>
+                    <li><strong>marginesu wewnętrznego (padding)</strong> - odstęp między zawartością a obramowaniem</li>
+                    <li><strong>obramowania (border)</strong> - ramka otaczająca element</li>
+                    <li><strong>marginesu zewnętrznego (margin)</strong> - odstęp między elementem a innymi elementami</li>
+                </ol>
+                <img src="../img/boxmodel.png" alt="Model pudełkowy">
+            </div>
+            <div class="backgr">
+                <h2>Padding</h2>
+                <p><strong>Padding</strong> (<strong>margines wewnętrzny</strong>) to odstęp między zawartością elementu (<strong>content</strong>) a jego obramowaniem (<strong>border</strong>)</p>
+                <pre><code>div {
+    padding: 10px;
+}</code></pre>
+                <p><strong>padding-top</strong>, <strong>padding-right</strong>, <strong>padding-bottom</strong>, <strong>padding-left</strong> - właściwości paddingu poszczególnych stron elementu</p>
+                <pre><code>div {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Obramowanie</h2>
+                <p><strong>border-style</strong> - styl obramowania</p>
+                <ul>
+                    <li><strong>none</strong> - brak obramowania</li>
+                    <li><strong>solid</strong> - ciągła linia</li>
+                    <li><strong>dashed</strong> - kreskowana linia</li>
+                    <li><strong>dotted</strong> - kropkowana linia</li>
+                    <li><strong>double</strong> - podwójna linia</li>
+                    <li><strong>groove</strong> - wypukły efekt</li>
+                    <li><strong>ridge</strong> - wklęsły efekt</li>
+                    <li><strong>inset</strong> - wklęsły efekt</li>
+                    <li><strong>outset</strong> - wypukły efekt</li>
+                    <li><strong>hidden</strong> - ukryte obramowanie</li>
+                </ul>
+                <pre><code>div{
+    border-style: solid;
+}</code></pre>
+
+                <p><strong>border-width</strong> - szerokość obramowania</p>
+                <ul>
+                    <li><strong>thin</strong> - cienkie obramowanie</li>
+                    <li><strong>medium</strong> - średnie obramowanie</li>
+                    <li><strong>thick</strong> - grube obramowanie</li>
+                    <li><strong>jednostka</strong> - można określić szerokość za pomocą jednostek (np. 2px)</li>
+                </ul>
+                <pre><code>div{
+    border-width: 2px;
+}</code></pre>
+
+                <p><strong>border-color</strong> - kolor obramowania</p>
+                <pre><code>div{
+    border-color: black;
+}</code></pre>
+
+                <p><strong>border</strong> - skrót dla powyższych właściwości obramowania</p>
+                <pre><code>div{
+    border: 2px solid black;
+}</code></pre>
+
+                <p><strong>border-radius</strong> - promień zaokrąglenia narożników obramowania</p>
+                <pre><code>#div1{
+    border-radius: 10px;
+}
+#div2{
+    border-radius: 3% 10%;
+}</code></pre>
+
+                <p><strong>border-top</strong>, <strong>border-right</strong>, <strong>border-bottom</strong>, <strong>border-left</strong> - właściwości obramowania poszczególnych stron elementu</p>
+                <pre><code>div{
+    border-top: 2px solid black;
+    border-right: 4px ridge red;
+    border-bottom: 3px solid black;
+    border-left: 5px inset blue;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Margin</h2>
+                <p><strong>Margin</strong> (<strong>margines zewnętrzny</strong>) to odstęp między elementem a innymi elementami</p>
+                <pre><code>div {
+    margin: 10px;
+}</code></pre>
+                <p><strong>margin-top</strong>, <strong>margin-right</strong>, <strong>margin-bottom</strong>, <strong>margin-left</strong> - właściwości marginesu poszczególnych stron elementu</p>
+                <pre><code>div {
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Skróty dla powyższych właściwości (i niektórych innych) poszczególnych stron elementu</h2>
+                <ul>
+                    <li><strong>1 wartość</strong> - dotyczy wszystkich stron</li>
+                    <li><strong>2 wartości</strong> - pierwsza dotyczy górnej i dolnej, druga lewej i prawej</li>
+                    <li><strong>3 wartości</strong> - pierwsza dotyczy górnej, druga lewej i prawej, trzecia dolnej</li>
+                    <li><strong>4 wartości</strong> - kolejno górna, prawa, dolna, lewa</li>
+                </ul>
+                <pre><code>div{
+    border-style: solid none dashed double;
+    border-width: 2px 4px 6px;
+    border-color: red blue;
+    margin: 10px 20px 30px 40px;
+    padding: 5px 10px;
+}</code></pre>
+            </div>
+    </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

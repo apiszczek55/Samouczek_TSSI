@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiperłącza HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - hiperłącza w HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+</head>
+<body>
+    <div id="kontener">
+        <header id="gora">
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+            <nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Czym są hiperłącza?</h2>
+                <p><strong>Hiperłącza</strong> - elementy HTML, które umożliwiają nawigację między różnymi stronami internetowymi lub sekcjami wewnątrz tej samej strony. Są one definiowane za pomocą znacznika <strong>&lt;a&gt;</strong>.</p>
+                <ul>
+                    <li><strong>&lt;a&gt;</strong> - znacznik definiujący hiperłącze (liniowy)</li>
+                    <li><strong>href</strong> - obowiązkowy atrybut określający adres docelowy hiperłącza</li>
+                    <li><strong>target</strong> - atrybut określający sposób otwarcia linku (np. <strong>"_blank"</strong> - otwiera w nowej karcie, <strong>"_self"</strong> - otwiera w tej samej karcie)</li>
+                </ul>
+                <p>Przykład:</p>
+                <pre><code>&lt;a href="https://www.strona.com" target="_blank"&gt;Odwiedź stronę&lt;/a&gt;</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Hiperłącza mogą prowadzić do różnych miejsc, takich jak:</h2>
+                <ol>
+                    <li><strong>Inna strona internetowa</strong></li>
+                    <li><strong>Inna sekcja tej samej strony</strong></li>
+                    <li><strong>Adres e-mail</strong></li>
+                    <li><strong>Obrazek</strong></li>
+                    <li><strong>Dokument</strong></li>
+                </ol>
+            </div>
+            <div class="backgr">
+                <h2>Hiperłącza z odnośnikami wewnętrznymi</h2>
+                <p>Hiperłącza <strong>wewnętrzne</strong> prowadzą do innych sekcji tej samej strony lub do innych stron w ramach tej samej domeny.</p>
+                <p>Aby utworzyć hiperłącze wewnętrzne stosujemy atrybut <strong>id</strong> wewnątrz elementu do którego chcemy przejść, a następnie tworzymy hiperłącze za pomocą znacznika <strong>&lt;a href="#id"&gt;</strong>.</p>
+                <p>Przykład:</p>
+                <pre><code>&lt;h2 id="sekcja1"&gt;Sekcja 1&lt;/h2&gt;</code></pre>
+                <pre><code>&lt;a href="#sekcja1"&gt;Przejdź do sekcji 1&lt;/a&gt;</code></pre>
+                <a href="#gora" style="display: block; text-align: center; width:fit-content; margin: 20px auto;">Przejdź do góry strony</a>
+            </div>
+            <div class="backgr">
+                <h2>Adresowanie względne i bezwzględne</h2>
+                <p>Przy stosowaniu m.in. hiperłączy lub plików, obrazków, itp. ważne jest zrozumienie różnicy między adresowaniem <strong>względnym</strong> a <strong>bezwzględnym</strong>.</p>
+                <p><strong>Adresowanie względne</strong> odnosi się do lokalizacji plików względem bieżącego pliku. Używane jest do linkowania wewnątrz witryny, co ułatwia przenoszenie strony między serwerami oraz dodawania m.in. obrazków na stronę. Na przykład: <strong>strona.html</strong> lub <strong>../grafika/obrazek.png</strong>.</p>
+                <p><strong>Adresowanie bezwzględne</strong> odnosi się do pełnego adresu URL. Używane jest do adresów stron internetowych, np. <strong>https://www.google.com/</strong>.</p>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

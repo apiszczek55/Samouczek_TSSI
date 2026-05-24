@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie tabel w CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI -  formatowanie tabel">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Formatowanie tabel - najczęstsze właściwości</h2>
+                <p><strong>padding</strong></p>
+                <p><strong>width</strong></p>
+                <p><strong>height</strong></p>
+                <p><strong>border</strong></p>
+                <ul>
+                    <li><strong>border-style</strong></li>
+                    <li><strong>border-width</strong></li>
+                    <li><strong>border-color</strong></li>
+                </ul>
+                <p><strong>border-collapse</strong> - określa, czy obramowania komórek mają być złączone (<strong>collapsed</strong>) czy oddzielne (<strong>separate</strong>)</p>
+                <pre><code>table, td, th {
+    border: 1px solid #687E8C;
+    border-collapse: collapse;
+    padding: 5px 10px;
+}</code></pre>
+                <div id="przyklad1">
+                    <table>
+                        <tr>
+                            <th>Nagłówek 1</th>
+                            <th>Nagłówek 2</th>
+                        </tr>
+                        <tr>
+                            <td>Komórka 1</td>
+                            <td>Komórka 2</td>
+                        </tr>
+                    </table>
+                </div> 
+                <p><strong>border-spacing</strong> - określa odstęp między obramowaniami komórek (przy <strong>border-collapse: separate</strong>)</p>
+                <p><strong>border-radius</strong></p>
+                <pre><code>table, td, th {
+    border: 2px solid #687E8C;
+    padding: 5px 10px;
+    border-spacing: 10px;
+}
+table {
+    border-radius: 10px;
+}
+</code></pre>
+                <div id="przyklad2">
+                    <table>
+                        <tr>
+                            <th>Nagłówek 1</th>
+                            <th>Nagłówek 2</th>
+                        </tr>
+                        <tr>
+                            <td>Komórka 1</td>
+                            <td>Komórka 2</td>
+                        </tr>
+                    </table>
+                </div> 
+            </div>
+    </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

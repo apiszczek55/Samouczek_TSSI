@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - podstawy CSS">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+        <nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Czym jest CSS?</h2>
+                <p><strong>CSS</strong> (<strong>Cascading Style Sheets</strong>) jest używany do opisu wyglądu i formatowania strony internetowej. CSS pozwala na oddzielne zarządzanie strukturą dokumentu HTML i jego wyglądem. Można w nim kontrolować czcionkę, kolor, marginesy i wiele innych.</p>
+            </div>
+            <div class="backgr">
+                <h2>Walidator CSS</h2>
+                <p><strong><a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="Kliknij aby przejść na stronę walidatora CSS">Walidator CSS</a></strong> to narzędzie, które służy do sprawdzania poprawności kodu CSS. Zarówno CSS, jak i HTML powinny być poprawnie zwalidowane, aby zapewnić zgodność z standardami.</p>
+            </div>
+            <div class="backgr">
+                <h2>Dołączanie arkusza stylów do dokumentu HTML</h2>
+                <p>Istnieją różne sposoby dołączenia arkusza stylów do dokumentu HTML:</p>
+                    <p><strong>Dołączenie stylów bezpośrednio do elementów</strong> (<strong>styl lokalny</strong>) - poprzez użycie atrybutu <code><strong>style</strong></code></p>
+                    <pre><code>&lt;div style="color: white; background-color: black;"&gt;Tekst&lt;/div&gt;</code></pre>
+
+                    <p><strong>Dołączenie wewnętrznego arkusza stylów</strong> (<strong>styl wewnętrzny</strong>) - poprzez użycie znacznika <code><strong>&lt;style&gt;</strong></code> w sekcji <code><strong>&lt;head&gt;</strong></code></p>
+                    <pre><code>&lt;style&gt;
+    body {
+        background-color: lightgray;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <p><strong>Dołączenie zewnętrznego arkusza stylów</strong> (<strong>styl zewnętrzny</strong>) - poprzez użycie znacznika <code><strong>&lt;link&gt;</strong></code> z atrybutami <code><strong>rel="stylesheet"</strong></code> i <code><strong>href</strong></code> w sekcji <code><strong>&lt;head&gt;</strong></code></p>
+                    <pre><code>&lt;link rel="stylesheet" href="styl.css"&gt;</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Kaskadowość</h2>
+                <p>CSS jest kaskadowym językiem stylów, co oznacza, że style mogą być stosowane w różnych poziomach i mają różne priorytety. Wiele arkuszy stylów może wpływać na wygląd jednego elementu na stronie internetowej, a także jeden styl może być dołączony do wielu plików HTML. <strong>Kaskadowość określa, które style mają pierwszeństwo, gdy wiele z nich jest stosowanych do tego samego elementu</strong>.</p>
+            </div>
+            <div class="backgr">
+                <h2>Hierarchia stylów</h2>
+                <h3>(Im styl jest bliżej formatowanego elementu, tym jest ważniejszy)</h3>
+                <ol>
+                    <li><strong>Styl lokalny</strong></li>
+                    <li><strong>Rozciąganie stylu &lt;span&gt;</strong></li>
+                    <li><strong>Wydzielone bloki &lt;div&gt;</strong></li>
+                    <li><strong>Wewnętrzny arkusz stylów</strong></li>
+                    <li><strong>Zewnętrzny arkusz stylów</strong></li>
+                    <li><strong>Importowany arkusz stylów</strong></li>
+                    <li><strong>Domyślne ustawienia przeglądarki</strong></li>
+                </ol>
+            </div>
+            <div class="backgr">
+                <h2>Z czego składa się CSS?</h2>
+                <p>CSS składa się z <strong>reguł stylów</strong>, które definiują wygląd elementów na stronie internetowej. Każda reguła składa się z <strong>selektora</strong> i <strong>deklaracji stylu</strong> (<strong>właściwości</strong> i <strong>wartości</strong>).</p>
+                <pre><code><strong>selektor</strong> {
+    właściwość: wartość;        <i>&lt;!-- Deklaracja stylu --&gt;</i>
+}</code></pre>
+            <ol>
+                <li><strong>Selektor</strong> - określa, do jakich elementów zostanie zastosowany styl <br>(np. div)</li>
+                <li><strong>Właściwość</strong> - określa, jakiego rodzaju modyfikację należy wykonać <br>(np. kolor tła)</li>
+                <li><strong>Wartość</strong> - określa konkretną wartość właściwości (np. fioletowy)</li>
+            </ol>
+            <pre><code>div {
+    background-color: purple;
+}</code></pre>
+            </div>
+        </main>
+        </div>
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

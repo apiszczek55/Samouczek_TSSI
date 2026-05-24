@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - formularze w HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+        <main> 
+            <div class="backgr">
+                <h2>Formularze</h2>
+                <p><strong>Formularze</strong> w HTML są używane do zbierania informacji od użytkowników, które mogą być następnie przetwarzane przez serwer. Formularze składają się z różnych elementów.</p>
+            </div>
+            <div class="backgr">
+                <h2>Tworzenie formularza</h2>
+                <p>Aby stworzyć formularz należy użyć znacznika <strong>&lt;form&gt;</strong>. Wewnątrz umieszcza się różne elementy, które pozwalają użytkownikowi na wprowadzanie danych.</p>
+                <p>Atrybuty znacznika <strong>&lt;form&gt;</strong>:</p>
+                <ul>
+                    <li><strong>action</strong> - określa adres URL, do którego zostaną wysłane dane formularza</li>
+                    <li><strong>method</strong> - określa metodę do przesłania danych (<strong>get</strong> lub <strong>post</strong>) (zawsze używaj metody <strong>POST</strong>, jeśli dane formularza zawierają poufne lub osobiste informacje)</li>
+                    <li><strong>autocomplete</strong> - kontroluje, czy przeglądarka powinna automatycznie wypełniać pola formularza na podstawie wcześniej wprowadzonych danych użytkownika (domyślnie włączone)</li>
+                    <li><strong>novalidate</strong> - wyłącza domyślne walidowanie formularza</li>
+                    <li><strong>enctype</strong> - określa typ kodowania danych formularza</li>
+                </ul>
+            </div>
+            <div class="backgr">
+                <h2>Textarea</h2>
+                <p>Element <strong>&lt;textarea&gt;</strong> służy do tworzenia wieloliniowego pola tekstowego, w którym użytkownik może wprowadzać dłuższe teksty. Przy jego użyciu metodą wysyłania danych musi być <strong>post</strong>.</p>
+                <p>Atrybuty znacznika <strong>&lt;textarea&gt;</strong>:</p>
+                <ul>
+                    <li><strong>name</strong> - określa nazwę pola tekstowego</li>
+                    <li><strong>rows</strong> - określa liczbę wierszy w polu tekstowym</li>
+                    <li><strong>cols</strong> - określa liczbę kolumn w polu tekstowym</li>
+                </ul>
+                <p>Przykład:</p>
+                <pre><code>&lt;textarea name="wiadomosc" rows="5" cols="40"&gt;&lt;/textarea&gt;</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Input i label</h2>
+                <p>Element <strong>&lt;input&gt;</strong> (pojedynczy) służy do tworzenia różnych typów pól do wprowadzania danych, takich jak pola tekstowe, pole wyboru czy przyciski.</p>
+                <p>Element <strong>&lt;label&gt;</strong> (kontenerowy) jest używany do etykietowania pól formularza, co poprawia dostępność i użytkowość. Atrybut <strong>for</strong> powinien odpowiadać atrybutowi <strong>id</strong> pola formularza, z którym jest powiązany. Wtedy po kliknięciu w etykietę, odpowiadające pole formularza zostaje aktywowane.</p>
+                <p>Przykład:</p>
+                <pre><code>&lt;label for="imie"&gt;Imię:&lt;/label&gt;
+&lt;input type="text" id="imie" name="imie"&gt;</code></pre>
+                <p>Można również umieszczać inputy wewnątrz znaczników <strong>&lt;label&gt;</strong>, ale wtedy nie używa się atrybutu <strong>for</strong>:</p>
+                <pre><code>&lt;label&gt;Imię: &lt;input type="text" name="imie"&gt;&lt;/label&gt;</code></pre>
+                <p>Atrybuty <strong>&lt;input&gt;</strong>:</p>
+                <ul>
+                    <li><strong>type</strong> - określa typ danych jakie mają być wprowadzane</li>
+                    <li><strong>name</strong> - określa nazwę pola, używaną podczas przesyłania danych formularza</li>
+                    <li><strong>value</strong> - określa domyślną wartość pola</li>
+                    <li><strong>placeholder</strong> - wyświetla tekst zasugerowany dla użytkownika</li>
+                    <li><strong>required</strong> - określa, czy pole jest wymagane</li>
+                    <li><strong>readonly</strong> - określa, czy pole jest tylko do odczytu (nie można w nim wprowadzać danych ani zmieniać wartości, ale można kliknąć)</li>
+                    <li><strong>disabled</strong> - określa, czy pole jest wyłączone (nie można w nim wprowadzać danych, zmieniać wartości ani kliknąć)</li>
+                    <li><strong>minlength</strong> - określa minimalną liczbę znaków, które można wprowadzić do pola</li>
+                    <li><strong>maxlength</strong> - określa maksymalną liczbę znaków, które można wprowadzić do pola</li>
+                    <li><strong>size</strong> - określa szerokość pola tekstowego w znakach, które mogą być widoczne na raz bez przewijania. Ważniejsza od niego jest szerokość w CSS</li>
+                    <li><strong>tabindex</strong> - określa kolejność przechodzenia między polami formularza przy użyciu klawiatury (przycisku Tab)</li>
+                    <li><strong>accesskey</strong> - określa skrót klawiszowy dostępu do pola formularza</li>
+                    <li><strong>autofocus</strong> - określa, czy pole ma być automatycznie aktywowane po załadowaniu strony</li>
+                </ul>
+            </div>
+            <div class="backgr">
+                <h2>Typy elementów <strong>&lt;input&gt;</strong></h2>
+                <p>Element <strong>&lt;input&gt;</strong> może mieć różne typy, które określają sposób wyświetlania i zachowania pola:</p>
+                    <p><strong>type="text"</strong> - pole tekstowe do wprowadzania jednej linii tekstu</p>
+                    <pre><code>&lt;input type="text" name="nazwa_uzytkownika" placeholder="Nazwa użytkownika" &gt;</code></pre>
+
+                    <p><strong>type="password"</strong> - pole hasła, gdzie wprowadzane znaki są ukryte (gwiazdki lub kółka)</p>
+                    <pre><code>&lt;input type="password" name="haslo" placeholder="Hasło" &gt;</code></pre>
+
+                    <p><strong>type="submit"</strong> - przycisk do przesłania formularza</p>
+                    <pre><code>&lt;input type="submit" value="Prześlij" &gt;</code></pre>
+
+                    <p><strong>type="reset"</strong> - przycisk do wyczyszczenia pól formularza/przywrócenia wszystkich wartości do wartości domyślnych</p>
+                    <pre><code>&lt;input type="reset" value="Wyczyść" &gt;</code></pre>
+                    
+                    <p><strong>type="tel"</strong> - pole do wprowadzania numeru telefonu</p>
+                    <pre><code>&lt;input type="tel" name="telefon" placeholder="Numer telefonu" &gt;</code></pre>
+
+                    <p><strong>type="email"</strong> - pole do wprowadzania adresu email. Może zawierać walidację adresu email (np. sprawdza, czy zawiera znak @)</p>
+                    <pre><code>&lt;input type="email" name="email" placeholder="Adres email" &gt;</code></pre>
+
+                    <p><strong>type="url"</strong> - pole do wprowadzania adresu URL. Może zawierać walidację adresu URL (np. czy zawiera https://)</p>
+                    <pre><code>&lt;input type="url" name="adres" placeholder="Adres strony internetowej" &gt;</code></pre>
+
+                    <p><strong>type="date"</strong> - pole do wyboru daty</p>
+                    <pre><code>&lt;input type="date" name="data_urodzenia" placeholder="Data urodzenia" &gt;</code></pre>
+
+                    <p><strong>type="month"</strong> - pole do wyboru miesiąca</p>
+                    <pre><code>&lt;input type="month" name="miesiac" placeholder="Miesiąc" &gt;</code></pre>
+
+                    <p><strong>type="week"</strong> - pole do wyboru tygodnia</p>
+                    <pre><code>&lt;input type="week" name="tydzien" placeholder="Tydzień" &gt;</code></pre>
+
+                    <p><strong>type="time"</strong> - pole do wyboru czasu</p>
+                    <pre><code>&lt;input type="time" name="czas" placeholder="Czas" &gt;</code></pre>
+
+                    <p><strong>type="number"</strong> - pole do wprowadzania liczb</p>
+                    <pre><code>&lt;input type="number" name="liczba" placeholder="Ilość" min="0" max="100" 
+step="2" &gt;       <i>&lt;-- krok zmiany wartości (co 2) --&gt;</i></code></pre>
+
+                    <p><strong>type="range"</strong> - pole do wyboru wartości numerycznej w określonym zakresie</p>
+                    <pre><code>&lt;input type="range" name="zakres" min="0" max="100" &gt;</code></pre>
+
+                    <p><strong>type="color"</strong> - pole do wyboru koloru</p>
+                    <pre><code>&lt;input type="color" name="kolor" &gt;</code></pre>
+
+                    <p><strong>type="hidden"</strong> - pole ukryte, używane do przesyłania danych, które nie są widoczne dla użytkownika</p>
+                    <pre><code>&lt;input type="hidden" name="user_id" value="123" &gt;</code></pre>
+
+                    <p><strong>type="file"</strong> - pole do przesyłania plików. Powinniśmy umieścić <strong>enctype="multipart/form-data"</strong> w formularzu (<strong>&lt;form&gt;</strong>)</p>
+                    <pre><code>&lt;input type="file" name="plik" accept="image/png" &gt;</code></pre>
+
+                    <p><strong>type="image"</strong> - obraz jako przycisk submit. Obowiązkowe atrybuty: <strong>src</strong> i <strong>alt</strong>. W <strong>&lt;form&gt;</strong> należy użyć atrybutu <strong>method="post"</strong></p>
+                    <pre><code>&lt;input type="image" name="obraz" src="obraz.png" alt="Prześlij obraz" &gt;</code></pre>
+                    
+                    <p><strong>type="button"</strong> - ogólny przycisk, który należy zaprogramować w języku JavaScript</p>
+                    <pre><code>&lt;input type="button" name="przycisk" value="Kliknij mnie" &gt;</code></pre>
+
+                    <p><strong>type="checkbox"</strong> - pole wyboru (przycisk zaznaczenia). Każdy checkbox ma swoją unikalną nazwę i wartość. Pola wyboru pozwalają użytkownikowi wybrać zero lub więcej opcji</p>
+                    <pre><code>&lt;input type="checkbox" name="samochod" value="mercedes" &gt; Mercedes</code></pre>
+
+                    <p><strong>type="radio"</strong> - przycisk opcji (tylko jeden z grupy może być zaznaczony). Jedna grupa to wszystkie pola o tej samej nazwie (atrybut <strong>name</strong>)</p>
+                    <pre><code>&lt;label&gt;&lt;input type="radio" name="plec" value="mezczyzna" &gt; Mężczyzna&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="plec" value="kobieta" &gt; Kobieta&lt;/label&gt;</code></pre>
+
+            </div>
+            <div class="backgr">
+                <h2>Grupowanie pól formularza</h2>
+                <p>Grupowanie pól formularza pozwala na lepsze uporządkowanie i organizację elementów. Może to być osiągnięte za pomocą znaczników <strong>&lt;fieldset&gt;</strong> i <strong>&lt;legend&gt;</strong>.</p>
+                <p><strong>&lt;fieldset&gt;</strong> - służy do grupowania powiązanych pól formularza. Tworzy wizualną ramkę wokół grupy elementów</p>
+                <p><strong>&lt;legend&gt;</strong> - definiuje tytuł dla grupy pól formularza, umieszczany wewnątrz <strong>&lt;fieldset&gt;</strong></p>
+                <p>Przykład:</p>
+                <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Dane osobowe&lt;/legend&gt;
+    &lt;label&gt;Imię: &lt;input type="text" name="imie" placeholder="Anna" 
+    required&gt;&lt;/label&gt;
+
+    &lt;label&gt;Nazwisko: &lt;input type="text" name="nazwisko" placeholder="Nowak" 
+    required&gt;&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Przycisk button</h2>
+                <p><strong>&lt;button&gt;</strong> (liniowy, kontenerowy) to przycisk, który można stylować za pomocą CSS i zaprogramować w języku JavaScript. Od <strong>&lt;input type="button"&gt;</strong> różni się tym, że może zawierać inne elementy HTML takie jak obrazek, tekst, itp. Jednak <b>nie</b> może zawierać znaczników: <strong>a</strong>, <strong>input</strong>, <strong>select</strong>, <strong>textarea</strong>, <strong>label</strong>, <strong>button</strong>, <strong>fieldset</strong>.</p>
+                <p>Przycisk <strong>&lt;button&gt;</strong> może mieć 3 rodzaje:</p>
+                <ul>
+                    <li><strong>type="button"</strong> - ogólny przycisk, który należy zaprogramować w języku JavaScript</li>
+                    <li><strong>type="submit"</strong> - przycisk submit, który wysyła dane formularza (działa jak input submit)</li>
+                    <li><strong>type="reset"</strong> - przycisk reset, który czyści dane formularza (działa jak input reset)</li>
+                </ul>
+                <p>Przykłady:</p>
+                <pre><code>&lt;button type="button" name="przycisk1" &gt;Kliknij mnie&lt;/button&gt;
+&lt;button type="submit" name="przycisk2" &gt;Prześlij&lt;/button&gt;
+&lt;button type="reset" name="przycisk3" &gt;Resetuj&lt;/button&gt;</code></pre>
+
+                    <p>Przykładowe atrybuty przycisku:</p>
+                    <ul>
+                        <li><strong>type</strong> - określa typ przycisku (obowiązkowy)</li>
+                        <li><strong>name</strong> - określa nazwę przycisku</li>
+                        <li><strong>value</strong> - określa wartość domyślną przycisku</li>
+                        <li><strong>autofocus</strong> - ustawia fokus na przycisku po załadowaniu strony</li>
+                        <li><strong>disabled</strong> - wyłącza przycisk (nie można go kliknąć)</li>
+                        <li><strong>form</strong> - określa formularz, do którego należy przycisk</li>
+                        <li><strong>formaction</strong> - określa adres URL, do którego mają być przesłane dane formularza po kliknięciu</li>
+                        <li><strong>formmethod</strong> - określa metodę do wysyłania danych formularza po kliknięciu</li>
+                    </ul>
+            </div>
+            <div class="backgr">
+                <h2>Select</h2>
+                <p>Znacznik <strong>&lt;select&gt;</strong> służy do tworzenia listy wyboru, z której użytkownik może wybrać jedną lub więcej opcji. Opcje są zdefiniowane za pomocą elementów <strong>&lt;option&gt;</strong>.</p>
+                <p>Atrybuty <strong>&lt;select&gt;</strong>:</p>
+                <ul>
+                    <li><strong>name</strong> - określa nazwę listy wyboru</li>
+                    <li><strong>multiple</strong> - pozwala na wybór wielu opcji z listy jednocześnie</li>
+                    <li><strong>size</strong> - określa liczbę widocznych opcji bez przewijania</li>
+                </ul>
+                <p>Atrybuty <strong>&lt;option&gt;</strong>:</p>
+                <ul>
+                    <li><strong>value</strong> - określa wartość opcji. Jeśli atrybut <strong>value</strong> nie jest określony, jako wartość opcji zostanie użyty tekst wewnątrz elementu <strong>&lt;option&gt;</strong></li>
+                    <li><strong>selected</strong> - określa, czy opcja jest zaznaczona domyślnie</li>
+                    <li><strong>disabled</strong> - wyłącza opcję (nie można jej wybrać)</li>
+                </ul>
+
+                <p>Przykład:</p>
+                <pre><code>&lt;label for="kraj"&gt;Wybierz kraj: &lt;/label&gt;
+    &lt;select name="kraj" id="kraj" size="4" &gt;
+        &lt;option value="polska" selected&gt;Polska&lt;/option&gt;
+        &lt;option value="niemcy"&gt;Niemcy&lt;/option&gt;
+        &lt;option value="francja"&gt;Francja&lt;/option&gt;
+        &lt;option value="hiszpania"&gt;Hiszpania&lt;/option&gt;
+        &lt;option value="ukraina"&gt;Ukraina&lt;/option&gt;
+        &lt;option value="slowacja"&gt;Słowacja&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                <p>Aby zgrupować opcje w kategorie, można użyć elementu <strong>&lt;optgroup&gt;</strong> z atrybutem <strong>label</strong>:</p>
+                <pre><code>&lt;label for="kraj"&gt;Wybierz kraj: &lt;/label&gt;
+&lt;select name="kraj" id="kraj" &gt;
+    &lt;optgroup label="Europa"&gt;
+        &lt;option value="polska"&gt;Polska&lt;/option&gt;
+        &lt;option value="niemcy"&gt;Niemcy&lt;/option&gt;
+        &lt;option value="francja"&gt;Francja&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Azja"&gt;
+        &lt;option value="japonia"&gt;Japonia&lt;/option&gt;
+        &lt;option value="chiny"&gt;Chiny&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Datalist</h2>
+                <p>Element <strong>&lt;datalist&gt;</strong> służy do tworzenia listy rozwijanej z predefiniowanymi opcjami. Użytkownik może wybrać jedną z opcji lub wpisać własną wartość. Jest to połączenie <strong>&lt;select&gt;</strong> z <br><strong>&lt;input type="text"&gt;</strong>.</p>
+                <p><strong>list="nazwa_listy"</strong> - obowiązkowy atrybut <strong>&lt;input&gt;</strong>, gdy chcemy utworzyć <strong>datalist</strong>. Nie trzeba określać typu tekstowego, jednak należy określić atrybut <strong>list</strong>, aby stworzyć odniesienie do rozwijalnej listy.</p>
+                <p>Tworzy się ją w następujący sposób:</p>
+                <pre><code>&lt;label for="kraj"&gt;Wybierz kraj: &lt;/label&gt;
+&lt;input list="kraje" name="kraj" id="kraj" &gt;
+&lt;datalist id="kraje"&gt;
+    &lt;option value="Polska"&gt;
+    &lt;option value="Niemcy"&gt;
+    &lt;option value="Francja"&gt;
+    &lt;option value="Hiszpania"&gt;
+    &lt;option value="Ukraina"&gt;
+    &lt;option value="Słowacja"&gt;
+&lt;/datalist&gt;</code></pre>
+                
+                <div class="datalist">
+                    <label for="kraj">Wybierz kraj: </label>
+                    <input list="kraje" name="kraj" id="kraj" >
+                    <datalist id="kraje">
+                        <option value="Polska">
+                        <option value="Niemcy">
+                        <option value="Francja">
+                        <option value="Hiszpania">
+                        <option value="Ukraina">
+                        <option value="Słowacja">
+                    </datalist>
+                </div>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

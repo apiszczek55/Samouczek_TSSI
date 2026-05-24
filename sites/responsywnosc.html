@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsywność</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI -  responsywność w CSS">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Responsywność</h2>
+                <p><strong>Responsywność</strong> to zdolność strony internetowej do adaptacji do różnych rozdzielczości ekranu i urządzeń (telefonów, tabletów, komputerów, itp.).</p>
+                <p>Aby strona była responsywna, musi zawierać:</p>
+                <ol>
+                    <li><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong> w sekcji <strong>&lt;head&gt;</strong> -  instrukcje dotyczące sposobu kontrolowania wymiarów i skalowania strony</li>
+                    <li><strong>media queries</strong> (<code><strong>@media</strong></code>) na co najmniej 3 urządzenia</li>
+                </ol>
+            </div>
+            <div class="backgr">
+                <h2>@media</h2>
+                <p><strong>Media queries</strong> to reguły CSS, które pozwalają na stosowanie różnych stylów w zależności od warunków urządzenia lub okna przeglądarki.</p>
+                <p>W <strong>media queries</strong> pisze się "drugiego CSS" używając reguł stylów (selektor i deklaracje). Można stosować je włącznie do ekranów urządzeń (<strong>screen</strong>), drukarek (<strong>print</strong>) lub wszystkich (<strong>all</strong> - domyślnie).</p>
+                <p>Najczęściej wykorzystywane warunki:</p>
+                <ul>
+                    <li><strong>max-width</strong> - maksymalna szerokość okna przeglądarki</li>
+                    <li><strong>min-width</strong> - minimalna szerokość okna przeglądarki</li>
+                    <li><strong>width</strong> - szerokość okna przeglądarki</li>
+                    <li><strong>max-height</strong> - maksymalna wysokość okna przeglądarki</li>
+                    <li><strong>min-height</strong> - minimalna wysokość okna przeglądarki</li>
+                    <li><strong>height</strong> - wysokość okna przeglądarki</li>
+                    <li><strong>orientation</strong> - orientacja urządzenia (<strong>landscape</strong> lub <strong>portrait</strong>)</li>
+                    <li><strong>prefers-color-scheme</strong> - preferencje dotyczące schematu kolorów (<strong>light</strong> lub <strong>dark</strong>)</li>
+                </ul>
+                <p>Przykład:</p>
+                <pre><code>@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>&lt;picture&gt;</h2>
+                <p>Element <strong>&lt;picture&gt;</strong> pozwala na wyświetlanie różnych wersji obrazu w zależności od warunków urządzenia lub okna przeglądarki, aby zmniejszyć obciążenie strony. Zamiast jednego skalowanego obrazu można zastosować wiele obrazów, które wyświetlą się w odpowiednich dla nich warunkach.</p>
+                <p>Przykład:</p>
+                <pre><code>&lt;picture&gt;
+    &lt;source media="(max-width: 768px)" srcset="image-mobile.jpg"&gt;
+    &lt;source media="(max-width: 1024px)" srcset="image-tablet.jpg"&gt;
+    &lt;img src="image-desktop.jpg" alt="Opis obrazu"&gt;
+&lt;/picture&gt;</code></pre>
+                    <ol>
+                        <li><strong>&lt;source&gt;</strong> określa różne wersje obrazu dla różnych warunków</li>
+                        <li><strong>srcset</strong> - obowiązkowy atrybut definiujący źródło obrazu</li>
+                        <li><strong>media</strong> - atrybut definiujący warunki wyświetlania obrazu</li>
+                    </ol>
+                    <p>Należy również zdefiniować <strong>&lt;img&gt;</strong> dla przeglądarek, które nie obsługują <strong>&lt;picture&gt;</strong>.</p>
+            </div>
+    </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

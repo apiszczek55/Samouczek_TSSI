@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - podstawy HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+        <nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="backgr">
+            <h2>Czym jest HTML?</h2>
+            <p><strong>HTML</strong> (<strong>Hypertext Markup Language</strong>) to język znaczników używany do tworzenia stron internetowych. Do definiowania różnych elementów strony używamy znaczników. Organizacją odpowiedzialną za rozwój standardów internetowych jest <strong>W3C</strong> (<strong>World Wide Web Consortium</strong>). Najnowszą wersją HTML jest obecnie <strong>HTML 5</strong>.</p>
+            </div>
+            
+            <div class="backgr">
+            <h2>Podstawowa struktura dokumentu HTML:</h2>
+            <ol>
+                <li><code><strong>&lt;!DOCTYPE html&gt;</strong></code> - deklaracja typu dokumentu (język <strong>HTML5</strong>)</li>
+                <li><code><strong>&lt;html&gt;</strong></code> - element root (posiada atrybut <strong>lang</strong> określający język dokumentu)</li>
+                <li><code><strong>&lt;head&gt;</strong></code> - sekcja nagłówkowa. Zawiera metadane, tytuł oraz informacje niewidoczne bezpośrednio na stronie</li>
+                <li><code><strong>&lt;meta charset="UTF-8"&gt;</strong></code> - deklaracja strony kodowej</li>
+                <li><code><strong>&lt;title&gt;</strong></code> - tytuł strony wyświetlany na karcie przeglądarki</li>
+                <li><code><strong>&lt;body&gt;</strong></code> - treść strony</li>
+                <li><code><strong>&lt;!--komentarz--&gt;</strong></code> - komentarz</li>
+            </ol>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, 
+initial-scale=1.0"&gt;
+    &lt;title&gt;Moja strona&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Witaj na mojej stronie!&lt;/h1&gt;
+    &lt;p&gt;To jest prosty paragraf.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <div class="backgr">
+            <h2>Czym jest walidator?</h2>
+            <p><strong><a href="https://validator.w3.org/" target="_blank" title="Kliknij aby przejść na stronę walidatora">Walidator</a></strong> to narzędzie, które służy do sprawdzania poprawności kodu HTML. Pozwala ono na wykrycie błędów w kodzie i zapewnia, że strona jest zgodna z obowiązującymi standardami.</p>
+            </div>
+
+            <div class="backgr">
+            <h2>Powiązane pojęcia</h2>
+            <ol>
+                <li><strong>JavaScript</strong> - język programowania, który pozwala na tworzenie interaktywnych elementów na stronach internetowych.</li>
+                <li><strong>SEO (Search Engine Optimization)</strong> - praktyki mające na celu poprawę widoczności strony w wynikach wyszukiwania.</li>
+                <li><strong>Dostępność cyfrowa</strong> - projektowanie witryn użytecznych dla wszystkich, w tym osób z niepełnosprawnościami, zgodnie ze standardem WCAG 2.1.</li>
+                <li><strong>Strona internetowa</strong> - dokument HTML udostępniany w Internecie.</li>
+                <li><strong>Przeglądarka</strong> - program komputerowy służący do wyświetlania stron internetowych. Jej zadaniami są kreowanie zawartości strony, wysyłanie żądań i pobieranie stron.</li>
+                <li><strong>Portal</strong> - strona internetowa oferująca dostęp do szerokiego zakresu informacji, która zawiera linki do innych stron i usług.</li>
+                <li><strong>Wortal</strong> - strona internetowa skupiająca się na jednej tematyce.</li>
+            </ol>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

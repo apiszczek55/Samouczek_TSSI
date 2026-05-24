@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - podstawy HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+        <nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="backgr">
+            <h2>Czym jest mapa odsyłaczy?</h2>
+            <p><strong>Mapa odsyłaczy</strong> (<strong>mapa obrazu</strong>) - obraz z klikalnymi obszarami. Jest to jakby "przezroczysta siatka z elementami (odyłaczami)" nałożona na obraz.</p>
+            </div>
+            <div class="backgr">
+                <h2>Definiowanie mapy odsyłaczy</h2>
+                <p>Mapa odsyłaczy jest definiowana za pomocą znacznika <strong>&lt;map&gt;</strong>, który posiada atrybut <strong>name</strong>. Każdy klikalny obszar jest definiowany za pomocą znacznika <strong>&lt;area&gt;</strong>, który posiada atrybuty:</p>
+                <ol>
+                    <li><strong>href</strong> - adres URL, do którego prowadzi kliknięcie w dany obszar</li>
+                    <li><strong>shape</strong> - kształt obszaru 
+                        <ul>
+                            <li><strong>rect</strong> - prostokąt</li>
+                            <li><strong>circle</strong> - koło</li>
+                            <li><strong>poly</strong> - wielokąt</li>
+                        </ul>
+                    </li>
+                    <li><strong>coords</strong> - współrzędne obszaru (zależne od kształtu)</li>
+                    <li><strong>alt</strong> - tekst alternatywny</li>
+                </ol>
+                <pre><code>&lt;map name="nazwa_mapy"&gt;
+    &lt;area shape="rect" coords="x1,y1,x2,y2" href="adres_url" alt="tekst_alternatywny"&gt;
+    &lt;area shape="circle" coords="x,y,r" href="adres_url" alt="tekst_alternatywny"&gt;
+    &lt;area shape="poly" coords="x1,y1,x2,y2,x3,y3,..." href="adres_url" alt="tekst_alternatywny"&gt;
+&lt;/map&gt;</code></pre>
+                </div>
+                <div class="backgr">
+                    <h2>Zastosowanie mapy odsyłaczy</h2>
+                    <p>Mapę należy dołączyć do obrazka na stronie za pomocą atrybutu <strong>usemap</strong> dodawanego do znacznika <strong>&lt;img&gt;</strong>:</p>
+                    <pre><code>&lt;img src="obraz.jpg" alt="opis_obrazka" usemap="#nazwa_mapy"&gt;</code></pre>
+                </div>
+
+            <div class="backgr">
+                <h2>Przykład mapy odsyłaczy</h2>
+                <a href="../odsylacze/mapaodsyl.html" style="display: block; text-align: center; width:fit-content; margin: 20px auto;" target="_blank">Mapa odsyłaczy</a>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

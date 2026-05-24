@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Układy stron</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI -  układy stron">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Ważne dla układu stron znaczniki</h2>
+                <p><code><strong>&lt;div&gt;</strong></code> - element blokowy, służy do grupowania innych elementów i tworzenia sekcji na stronie</p>
+                <p><strong>Znaczniki semantyczne</strong> - określają swoją zawartość i znaczenie w kontekście dokumentu</p>
+                <ul>
+                    <li><code><strong>&lt;header&gt;</strong></code> - reprezentuje nagłówek strony lub sekcji</li>
+                    <li><code><strong>&lt;nav&gt;</strong></code> - sekcja nawigacyjna z linkami do innych stron lub sekcji</li>
+                    <li><code><strong>&lt;main&gt;</strong></code> - główna treść dokumentu</li>
+                    <li><code><strong>&lt;footer&gt;</strong></code> - stopka strony lub sekcji</li>
+                    <li><code><strong>&lt;section&gt;</strong></code> - tematyczna grupa treści, zazwyczaj z nagłówkiem</li>
+                    <li><code><strong>&lt;article&gt;</strong></code> - samodzielna treść, taka jak wpis na blogu lub artykuł</li>
+                    <li><code><strong>&lt;aside&gt;</strong></code> - treść poboczna, taka jak pasek boczny lub reklama (powinna być pośrednio powiązana z otaczającą ją treścią - ilustrować, uzupełniać)</li>
+                    <li><code><strong>&lt;figure&gt;</strong></code> - element do grupowania obrazów i ich opisów</li>
+                    <li><code><strong>&lt;figcaption&gt;</strong></code> - opis dla elementu <code><strong>&lt;figure&gt;</strong></code></li>
+                </ul>
+            </div>
+            <div class="backgr">
+                <h2>Właściwość display</h2>
+                <p><strong>display</strong> - ważna właściwość CSS służąca do kontrolowania układu. Określa jak element HTML jest traktowany</p>
+                <p>Wartości <strong>display</strong>:</p>
+                <ul>
+                    <li><strong>block</strong> - element jest traktowany jako blok, zajmuje całą szerokość dostępnego miejsca i zaczyna się od nowej linii</li>
+                    <li><strong>inline</strong> - element jest traktowany jako liniowy, zajmuje tylko tyle miejsca, ile potrzebuje, i nie zaczyna się od nowej linii</li>
+                    <li><strong>inline-block</strong> - element jest traktowany jako liniowy, ale można mu ustawić szerokość i wysokość</li>
+                    <li><strong>none</strong> - element jest ukryty i nie zajmuje żadnego miejsca na stronie</li>
+                    <li><strong>flex</strong> - element jest traktowany jako kontener flex. Flexbox to model układu umożliwiający elastyczne i responsywne rozmieszczanie elementów (poziomo lub pionowo) w kontenerze</li>
+                    <li><strong>grid</strong> - element jest traktowany jako kontener grid i umożliwia stworzenie układów opartych na siatce  z wierszami i kolumnami</li>
+                </ul>
+            </div>
+            <div class="backgr">
+                <h2>Float i clear</h2>
+                <p>Właściwość <strong>float</strong> - służy do przemieszczania elementów wokół innych elementów. Jest używana głównie do tworzenia układów z elementami przypinanymi do lewej lub prawej krawędzi kontenera, a także do otaczania obrazów tekstem.</p>
+                <p>Wartości <strong>float</strong>:</p>
+                <ul>
+                    <li><strong>left</strong> - element unosi się na lewo od kontenera</li>
+                    <li><strong>right</strong> - element unosi się na prawo od kontenera</li>
+                    <li><strong>none</strong> - element nie jest pływający i jest wyświetlany w miejscu, w którym występuje w tekście</li>
+                </ul>
+                <p>Właściwość <strong>clear</strong> - służy do kontrolowania, jak elementy reagują na elementy pływające (<strong>float</strong>). Określa, czy element powinien być umieszczony obok elementów pływających, czy poniżej nich.</p>
+                <p>Wartości <strong>clear</strong>:</p>
+                <ul>
+                    <li><strong>none</strong> - pozwala elementom swobodnie poruszać się po obu stronach (domyślny)</li>
+                    <li><strong>left</strong> - element jest przesuwany poniżej elementów pływających po jego lewej stronie</li>
+                    <li><strong>right</strong> - element jest przesuwany poniżej elementów pływających po jego prawej stronie</li>
+                    <li><strong>both</strong> - element jest przesuwany poniżej elementów pływających</li>
+                </ul>
+                <p>Przykład:</p>
+                <pre><code>nav {
+    float: left;
+}
+main{
+    float: left;
+}
+footer{
+    clear: both;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Flexbox</h2>
+                <p><strong>Flexbox</strong> to model układu w CSS, który umożliwia elastyczne i responsywne rozmieszczanie elementów (poziomo lub pionowo) w kontenerze. Wymaga rodzica (kontenera) z ustawioną właściwością <strong>display: flex</strong> lub <strong>display: inline-flex</strong> oraz dzieci (elementów w kontenerze, 1 lub więcej).</p>
+                <p>Właściwości związane z Flexboxem:</p>
+                <ol>
+                    <li><strong>display: flex</strong> - określa, że element jest kontenerem flex</li>
+                    <li><strong>display: inline-flex</strong> - określa, że element jest liniowym kontenerem flex</li>
+                    <li><strong>flex-direction</strong> - określa kierunek, w którym elementy flexbox będą rozmieszczane w kontenerze 
+                    <ul>
+                        <li><strong>row</strong> - elementy są rozmieszczane poziomo (domyślnie)</li>
+                        <li><strong>row-reverse</strong> - elementy są rozmieszczane poziomo, ale w odwrotnej kolejności</li>
+                        <li><strong>column</strong> - elementy są rozmieszczane pionowo</li>
+                        <li><strong>column-reverse</strong> - elementy są rozmieszczane pionowo, ale w odwrotnej kolejności</li>
+                    </ul></li>
+                    <li><strong>flex-wrap</strong> - określa, czy elementy mogą się zawijać
+                    <ul>
+                        <li><strong>nowrap</strong> - elementy nie zawijają się (domyślnie)</li>
+                        <li><strong>wrap</strong> - elementy zawijają się</li>
+                        <li><strong>wrap-reverse</strong> - elementy zawijają się w odwrotnej kolejności</li>
+                    </ul></li>
+                    <li><strong>flex-flow</strong> - skrót dla <strong>flex-direction</strong> i <strong>flex-wrap</strong></li>
+                    <li><strong>justify-content</strong> - wyrównuje elementy , gdy nie wykorzystują całej dostępnej przestrzeni poziomo 
+                    <ul>
+                        <li><strong>flex-start</strong> - elementy są wyrównane do początku kontenera (domyślnie)</li>
+                        <li><strong>flex-end</strong> - elementy są wyrównane do końca kontenera</li>
+                        <li><strong>center</strong> - elementy są wyśrodkowane w kontenerze</li>
+                        <li><strong>space-between</strong> - elementy są rozmieszczone równomiernie, z pierwszym elementem przy początku kontenera i ostatnim przy końcu</li>
+                        <li><strong>space-around</strong> - elementy są rozmieszczone ze spacją wokół każdego elementu</li>
+                        <li><strong>space-evenly</strong> - elementy są rozmieszczone równomiernie, z równą ilością miejsca wokół każdego elementu</li>
+                    </ul></li>
+                    <li><strong>align-items</strong>- wyrównuje elementy , gdy nie wykorzystują całej dostępnej przestrzeni pionowo (wartości normal i stretch są tym samym)
+                    <ul>
+                        <li><strong>normal</strong> - elementy rozciągają się, aby wypełnić kontener (domyślnie)</li>
+                        <li><strong>flex-start</strong> - elementy są wyrównane do początku kontenera</li>
+                        <li><strong>flex-end</strong> - elementy są wyrównane do końca kontenera</li>
+                        <li><strong>center</strong> - elementy są wyśrodkowane w kontenerze</li>
+                        <li><strong>stretch</strong> - elementy rozciągają się, aby wypełnić kontener (domyślnie)</li>
+                        <li><strong>baseline</strong> - elementy są wyrównane względem linii bazowej ich treści</li>
+                    </ul></li>
+                    <li><strong>align-content</strong> - wyrównuje linie elementów, gdy nie wykorzystują całej dostępnej przestrzeni pionowo
+                    <ul>
+                        <li><strong>flex-start</strong> - linie są wyrównane do początku kontenera</li>
+                        <li><strong>flex-end</strong> - linie są wyrównane do końca kontenera</li>
+                        <li><strong>center</strong> - linie są wyśrodkowane w kontenerze</li>
+                        <li><strong>space-between</strong> - linie są rozmieszczone równomiernie, z pierwszą linią przy początku kontenera i ostatnią przy końcu</li>
+                        <li><strong>space-around</strong> - linie są rozmieszczone ze spacją wokół każdej linii</li>
+                        <li><strong>space-evenly</strong> - linie są rozmieszczone równomiernie, z równą ilością miejsca wokół każdej linii</li>
+                    </ul></li>
+                </ol>
+                <p>Elementy flexbox mogą mieć takie właściowości jak:</p>
+                    <ol>
+                        <li><strong>order</strong> - określa kolejność elementów w kontenerze flex</li>
+                        <li><strong>flex-grow</strong> - określa, jak bardzo element może rosnąć w stosunku do innych elementów</li>
+                        <li><strong>flex-shrink</strong> - określa, jak bardzo element może się kurczyć w stosunku do innych elementów</li>
+                        <li><strong>flex-basis</strong> - określa początkowy rozmiar elementu przed zastosowaniem właściwości <strong>flex-grow</strong> i <strong>flex-shrink</strong></li>
+                        <li><strong>flex</strong> - skrót dla <strong>flex-grow</strong>, <strong>flex-shrink</strong>, i <strong>flex-basis</strong></li>
+                        <li><strong>align-self</strong> - pozwala na nadpisanie ustawienia wyrównania dla pojedynczego elementu w kontenerze flex</li>
+                    </ol>
+                <h2>Centrowanie kontenera:</h2>
+                <pre><code>.kontener{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Grid layout</h2>
+                <p><strong>Grid</strong> to system układu oparty na siatce z wierszami i kolumnami. Wymaga rodzica (kontenera) z ustawioną właściwością <strong>display: grid</strong> lub <strong>display: inline-grid</strong> oraz dzieci (elementów w kontenerze, 1 lub więcej).</p>
+                <p>Właściwości związane z Grid layout:</p>
+                <ol>
+                    <li><strong>display: grid</strong> - określa, że element jest kontenerem grid</li>
+                    <li><strong>display: inline-grid</strong> - określa, że element jest liniowym kontenerem grid</li>
+                    <li><strong>grid-template-columns</strong> - definiuje kolumny w siatce. Może mieć wartości takie jak:
+                    <ul>
+                        <li><strong>px</strong></li>
+                        <li><strong>fr</strong></li>
+                        <li><strong>%</strong></li>
+                        <li><strong>auto</strong></li>
+                        <li><strong>repeat()</strong> - powtarza określoną liczbę razy określoną wartość (np. repeat(3, 1fr))</li>
+                        <li><strong>minmax()</strong> - określa zakres wielkości <br>(np. minmax(100px, 1fr))</li>
+                    </ul></li>
+                    <li><strong>grid-template-rows</strong> - definiuje wiersze w siatce. Może mieć wartości takie jak:
+                    <ul>
+                        <li><strong>px</strong></li>
+                        <li><strong>fr</strong></li>
+                        <li><strong>%</strong></li>
+                        <li><strong>auto</strong></li>
+                        <li><strong>repeat()</strong></li>
+                        <li><strong>minmax()</strong></li>
+                        <li><strong>min-content</strong></li>
+                        <li><strong>max-content</strong></li>
+                        <li><strong>fit-content</strong></li>
+                    </ul></li>
+                    <li><strong>grid-template-areas</strong> - definiuje sposób wyświetlania kolumn i wierszy przy użyciu nazwanych elementów siatki</li>
+                    <li><strong>column-gap</strong> - określa odstęp między kolumnami</li>
+                    <li><strong>row-gap</strong> - określa odstęp między wierszami</li>
+                    <li><strong>gap</strong> - określa odstęp między wierszami i kolumnami</li>
+                    <li><strong>align-content</strong> - określa, jak elementy w siatce mają być rozłożone w pionie
+                    <ul>
+                        <li><strong>space-evenly</strong></li>
+                        <li><strong>space-around</strong></li>
+                        <li><strong>space-between</strong></li>
+                        <li><strong>center</strong></li>
+                        <li><strong>start</strong></li>
+                        <li><strong>end</strong></li>
+                    </ul></li>
+                    <li><strong>justify-content</strong> - określa, jak elementy w siatce mają być rozłożone w poziomie
+                    <ul>
+                        <li><strong>space-evenly</strong></li>
+                        <li><strong>space-around</strong></li>
+                        <li><strong>space-between</strong></li>
+                        <li><strong>center</strong></li>
+                        <li><strong>start</strong></li>
+                        <li><strong>end</strong></li>
+                    </ul></li>
+                    <li><strong>place-content</strong> - określa, jak elementy w siatce mają być rozłożone w poziomie i pionie</li>
+                </ol>
+                <p>Elementy siatki mogą mieć właściwości:</p>
+                    <ol>
+                        <li><strong>grid-column-start</strong> - określa, w którym wierszu siatki ma się zaczynać element</li>
+                        <li><strong>grid-column-end</strong> - określa, w którym wierszu siatki ma się kończyć element</li>
+                        <li><strong>grid-column</strong> - skrót do ustawienia zarówno <strong>grid-column-start</strong>, jak i <strong>grid-column-end</strong></li>
+                        <li><strong>grid-row-start</strong> - określa, w którym wierszu siatki ma się zaczynać element</li>
+                        <li><strong>grid-row-end</strong> - określa, w którym wierszu siatki ma się kończyć element</li>
+                        <li><strong>grid-row</strong> - skrót do ustawienia zarówno <strong>grid-row-start</strong>, jak i <strong>grid-row-end</strong></li>
+                        <li><strong>grid-area</strong> - skrót do ustawienia <strong>grid-row-start</strong>, <strong>grid-column-start</strong>, <strong>grid-row-end</strong> i <strong>grid-column-end</strong></li>
+                        <li><strong>grid-area</strong> - określa też nazwę elementu w siatce (do zastosowania w <strong>grid-template-areas</strong>)</li>
+                        <li><strong>align-self</strong> - określa, jak element ma być wyrównany w pionie w ramach siatki</li>
+                        <li><strong>justify-self</strong> - określa, jak element ma być wyrównany w poziomie w ramach siatki</li>
+                        <li><strong>place-self</strong> - skrót do ustawienia zarówno <strong>align-self</strong>, jak i <strong>justify-self</strong></li>
+                        <li><strong>order</strong></li>
+                    </ol>
+            </div>
+    </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

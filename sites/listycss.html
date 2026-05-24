@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie list w CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI -  formatowanie list">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+    <nav class="pion">
+                <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+            </nav>
+            <main>
+                <div class="backgr">
+                    <h2>Formatowanie list</h2>
+                    <p><strong>list-style-type</strong> - określa typ punktacji listy (marker listy)</p>
+                    <p>Najczęstsze wartości:</p>
+                    <ul>
+                        <li><strong>circle</strong> - okręgi</li>
+                        <li><strong>disc</strong> - kropki (domyślna wartość dla list nieuporządkowanych)</li>
+                        <li><strong>decimal</strong> - liczby (domyślna wartość dla list uporządkowanych)</li>
+                        <li><strong>decimal-leading-zero</strong> - liczby z zerami na początku</li>
+                        <li><strong>lower-alpha</strong> - małe litery alfabetu</li>
+                        <li><strong>square</strong> - kwadraty</li>
+                        <li><strong>none</strong> - brak punktacji</li>
+                    </ul>
+                    <p>Inne wartości:</p>
+                    <ul>
+                        <li><strong>armenian</strong></li>
+                        <li><strong>cjk-ideographic</strong></li>
+                        <li><strong>georgian</strong></li>
+                        <li><strong>hebrew</strong></li>
+                        <li><strong>hiragana</strong></li>
+                        <li><strong>hiragana-iroha</strong></li>
+                        <li><strong>katakana</strong></li>
+                        <li><strong>katakana-iroha</strong></li>
+                        <li><strong>lower-greek</strong> - małe litery greckie</li>
+                        <li><strong>lower-latin</strong> - małe litery łacińskie</li>
+                        <li><strong>lower-roman</strong> - małe cyfry rzymskie</li>
+                        <li><strong>upper-alpha</strong> - wielkie litery alfabetu</li>
+                        <li><strong>upper-greek</strong> - wielkie litery greckie</li>
+                        <li><strong>upper-latin</strong> - wielkie litery łacińskie</li>
+                        <li><strong>upper-roman</strong> - wielkie cyfry rzymskie</li>
+                    </ul>
+                    <pre><code>ul{
+        list-style-type: square;
+    }
+    ol{
+        list-style-type: upper-greek;
+    }</code></pre>
+                    <p><strong>list-style-image</strong> - określa obraz jako punktację listy</p>
+                    <pre><code>ul{
+        list-style-image: url('kwiatek.png');
+    }</code></pre>
+                    
+                    <p><strong>list-style-position</strong> - określa położenie punktacji listy (markera listy)</p>
+                    <ul>
+                        <li><strong>inside</strong> - marker znajduje się wewnątrz elementu listy</li>
+                        <li><strong>outside</strong> - marker znajduje się na zewnątrz elementu listy (domyślna wartość)</li>
+                    </ul>
+                    <pre><code>ul{
+        list-style-position: inside;
+    }
+    ol{
+        list-style-position: outside;
+    }</code></pre>
+                    <p><strong>list-style</strong> - skrócona właściwość dla <strong>list-style-type</strong>, <strong>list-style-position</strong> i <strong>list-style-image</strong></p>
+                    <pre><code>ul{
+        list-style: square inside;
+    }
+    ol{
+        list-style: upper-greek outside;
+    }</code></pre>
+                </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

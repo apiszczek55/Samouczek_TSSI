@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listy HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - listy w HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+            <h2>Rodzaje list:</h2>
+            <ol>
+                <li><strong>LISTY UPORZĄDKOWANE</strong> - mają określoną kolejność (<strong>&lt;ol&gt;</strong>)</li>
+                <li><strong>LISTY NIEUPORZĄDKOWANE</strong> - nie mają określonej kolejności (<strong>&lt;ul&gt;</strong>)</li>
+                <li><strong>LISTY DEFINICJI</strong> - służą do prezentacji definicji (<strong>&lt;dl&gt;</strong>)</li>
+            </ol>
+            </div>
+            <div class="backgr">
+            <h2>Jak stworzyć listę uporządkowaną/nieuporządkowaną:</h2>
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Pierwszy element&lt;/li&gt;
+    &lt;li&gt;Drugi element&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Pierwszy element&lt;/li&gt;
+    &lt;li&gt;Drugi element&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+
+            <div class="backgr">
+            <h2>Jak stworzyć listę definicji:</h2>
+            <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Termin 1&lt;/dt&gt;
+    &lt;dd&gt;Definicja 1&lt;/dd&gt;
+    &lt;dt&gt;Termin 2&lt;/dt&gt;
+    &lt;dd&gt;Definicja 2&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+            </div>
+            <div class="backgr">
+            <h2>Listy zagnieżdżone</h2>
+            <p><strong>Listy zagnieżdżone</strong> - listy, które zawierają inne listy jako swoje elementy (lista w liście). Tworzy się je poprzez umieszczenie jednej listy <strong>wewnątrz elementu</strong> (<strong>&lt;li&gt;</strong>) innej listy:</p>
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Pierwszy element
+        &lt;ul&gt;
+            &lt;li&gt;Pod-element 1&lt;/li&gt;
+            &lt;li&gt;Pod-element 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Drugi element&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

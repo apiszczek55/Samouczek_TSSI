@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednostki w CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - jednostki">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Rodzaje jednostek w CSS</h2>
+                <ol>
+                    <li><strong>WZGLĘDNE (RELATYWNE)</strong> - są zależne od innych elementów na stronie</li>
+                    <li><strong>BEZWZGLĘDNE (ABSOLUTNE)</strong> - są niezależne od innych elementów na stronie</li>
+                </ol>
+            </div>
+            <div class="backgr">
+                <h2>Jednostki względne (relatywne)</h2>
+                <ol>
+                    <li><strong>em</strong> - zależna od rozmiaru czcionki elementu nadrzędnego <br>(np. 1.2em = 1.2 * rozmiar czcionki elementu nadrzędnego)</li>
+                    <li><strong>rem</strong> - zależna od rozmiaru czcionki głównego elementu (html/root)</li>
+                    <li><strong>%</strong> - procentowa wartość względem elementu nadrzędnego <br>(np. 50% = 0.5 * rozmiar elementu nadrzędnego)</li>
+                    <li><strong>vw</strong> - procentowa wartość względem szerokości okna przeglądarki <br>(np. 50vw = 50% szerokości okna)</li>
+                    <li><strong>vh</strong> - procentowa wartość względem wysokości okna przeglądarki <br>(np. 50vh = 50% wysokości okna)</li>
+                    <li><strong>vmin</strong> - procentowa wartość względem mniejszego wymiaru okna przeglądarki (mniejsza z <strong>vw</strong> i <strong>vh</strong>)</li>
+                    <li><strong>vmax</strong> - procentowa wartość względem większego wymiaru okna przeglądarki (większa z <strong>vw</strong> i <strong>vh</strong>)</li>
+                    <li><strong>ex</strong> - zależna od wysokości znaku 'x' w czcionce elementu <br>(np. 1ex = wysokość znaku 'x')</li>
+                    <li><strong>ch</strong> - zależna od szerokości znaku '0' w czcionce elementu <br>(np. 1ch = szerokość znaku '0')</li>
+                </ol>
+            </div>
+            <div class="backgr">
+                <h2>Jednostki bezwzględne (absolutne)</h2>
+                <ol>
+                    <li><strong>px</strong> - piksele (najczęściej używana jednostka). Są to jednostki fizyczne odpowiadające pikselom na ekranie</li>
+                    <li><strong>cm</strong> - centymetry</li>
+                    <li><strong>mm</strong> - milimetry</li>
+                    <li><strong>in</strong> - cale (1 cal = 2.54 cm)</li>
+                    <li><strong>pt</strong> - punkty (1/72 cala)</li>
+                    <li><strong>pc</strong> - piki (12 punktów)</li>
+                </ol>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektory CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - selektory">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Selektory elementów</h2>
+                <p><strong>*</strong> - selektor ogólny, wybiera wszystkie elementy na stronie. Jest często używany do zerowania domyślnych dla przegladarki marginesów i paddingów (o których dowiesz się w części "Model pudełkowy")</p>
+                <pre><code>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}</code></pre>
+
+                <p><strong>element</strong> - selektor elementu, wybiera wszystkie elementy danego typu</p>
+                <pre><code>p {
+    color: red;
+}</code></pre>
+
+                <p><strong>.klasa</strong> - selektor klasy, wybiera wszystkie elementy z daną klasą</p>
+                <pre><code>.zaznaczenie {
+    background-color: yellow;
+}</code></pre>
+
+                <p><strong>#id</strong> - selektor identyfikatora, wybiera element o danym identyfikatorze</p>
+                <pre><code>#kontener {
+    background-color: lightgray;
+}</code></pre>
+
+                <p><strong>element, element2</strong> - selektor grupowy, wybiera wszystkie elementy wymienione w grupie</p>
+                <pre><code>h1, h2 {
+    font-family: Arial, sans-serif;
+}</code></pre>
+
+                <p><strong>element element2</strong> - selektor potomka, wybiera wszystkie elementy2 będące potomkami danego elementu (są gdzieś w jego środku)</p>
+                <pre><code>nav ul {
+    list-style: none;
+}</code></pre>
+
+                <p><strong>element > element2</strong> - selektor dziecka, wybiera wszystkie elementy2 będące bezpośrednimi dziećmi danego elementu (są bezpośrednio w jego wnętrzu)</p>
+                <pre><code>nav > ul {
+display: flex;
+}</code></pre>
+
+                <p><strong>element + element2</strong> - selektor braci, wybiera element2 będący bezpośrednim następnikiem danego elementu</p>
+                <pre><code>h1 + p {
+    color: blue;
+}</code></pre>
+
+                <p><strong>element ~ element2</strong> - ogólny selektor braci, wybiera wszystkie elementy2 będące po danym elemencie</p>
+                <pre><code>h1 ~ p {
+    color: green;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Selektory pseudoklas i pseudoelementów</h2>
+                <p><strong>element:pseudoklasa</strong> - selektor pseudoklasy, wybiera elementy w określonym stanie</p>
+                <pre><code>a:hover {        <i>&lt;--link po najechaniu myszką--&gt;</i>
+    color: red;
+}
+button:active {        <i>&lt;--button podczas naciśnięcia--&gt;</i>
+    color: blue;
+}
+a:visited {        <i>&lt;--link odwiedzony--&gt;</i>
+    color: purple;
+}
+li:nth-child(odd) {        <i>&lt;--nieparzyste elementy listy--&gt;</i>
+    background-color: lightgray;
+}</code></pre>
+
+                <p><strong>element::pseudoelement</strong> - selektor pseudoelementu, wybiera część elementu</p>
+                <pre><code>p::first-letter {        <i>&lt;--pierwsza litera akapitu--&gt;</i>
+    font-size: 2em;
+    font-weight: bold;
+}
+p::first-line {        <i>&lt;--pierwsza linia akapitu--&gt;</i>
+    font-weight: bold;
+}
+li::marker {        <i>&lt;--marker listy--&gt;</i>
+    color: red;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Selektory atrybutów</h2>
+                <p><strong>[atrybut]</strong> - selektor atrybutu, wybiera wszystkie elementy posiadające dany atrybut</p>
+                <pre><code>[title] {
+    border: 1px solid blue;
+}</code></pre>
+
+                <p><strong>[atrybut="wartość"]</strong> - selektor, który wybiera wszystkie elementy posiadające dany atrybut o konkretnej wartości</p>
+                <pre><code>[title="ważne"] {
+    color: green;
+}</code></pre>
+
+                <p><strong>[atrybut~="wartość"]</strong> - selektor, który wybiera wszystkie elementy posiadające dany atrybut, którego wartość jest jedną z wielu wartości oddzielonych spacją</p>
+                <pre><code>[class~="zaznaczenie"] {
+    background-color: yellow;
+}</code></pre>
+
+                <p><strong>[atrybut^="wartość"]</strong> - selektor, który wybiera wszystkie elementy posiadające dany atrybut, którego wartość zaczyna się od podanej wartości</p>
+                <pre><code>[href^="https"] {       <i>&lt;--linki zaczynające się od https--&gt;</i>
+    color: green;
+}</code></pre>
+
+                <p><strong>[atrybut$="wartość"]</strong> - selektor, który wybiera wszystkie elementy posiadające dany atrybut, którego wartość kończy się na podaną wartość</p>
+                <pre><code>[href$=".pdf"] {       <i>&lt;--pliki kończące się na .pdf--&gt;</i>
+    color: red;
+}</code></pre>
+
+                <p><strong>[atrybut*="wartość"]</strong> - selektor, który wybiera wszystkie elementy posiadające dany atrybut, którego wartość zawiera podaną wartość</p>
+                <pre><code>[href*="example"] {     <i>&lt;--elementy zawierające w href "example"--&gt;</i>
+    color: blue;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Zasady nazewnictwa klas i identyfikatorów</h2>
+                <ol>
+                    <li><strong>Nie używaj spacji.</strong> Używaj -, _ lub wielkich liter do oddzielania słów</li>
+                    <li><strong>Wielkość liter ma znaczenie</strong></li>
+                    <li><strong>Twórz opisowe nazwy</strong></li>
+                    <li><strong>Nie używaj cyfr na początku</strong></li>
+                </ol>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

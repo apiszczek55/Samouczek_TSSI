@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI -  menu w CSS">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Menu</h2>
+                <p><strong>Menu</strong> najlepiej umieszczać na stronie w elemencie <strong>nav</strong>.</p>
+                <p>Może mieć ono formę:</p>
+                <ul>
+                    <li><strong>pionową</strong></li>
+                    <li><strong>poziomą</strong></li>
+                </ul>
+                <p>Należy pamiętać o użyciu listy nieuporządkowanej (<strong>ul</strong>) i usunięciu jej punktacji.</p>
+            </div>
+                <div class="backgr">
+                    <h2>Menu pionowe</h2>
+                    <p>Aby stworzyć <strong>pionowe menu</strong> można:</p>
+                    <ul>
+                        <li>ustawić elementy listy na <strong>display: block</strong></li>
+                        <li><strong>usunąć dekorację</strong> hiperłącza</li>
+                    </ul>
+                    <pre><code>ul{
+    list-style-type: none;
+}
+ul li{
+    display: block;
+}
+ul a{
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    color: black;
+}</code></pre>
+                    <div id="lista1">
+                        <ul>
+                            <li><a href="#element1">element1</a></li>
+                            <li><a href="#element2">element2</a></li>
+                            <li><a href="#element3">element3</a></li>
+                            <li><a href="#element4">element4</a></li>
+                            <li><a href="#element5">element5</a></li>
+                        </ul>
+                </div>
+                </div>
+                <div class="backgr">
+                    <h2>Menu poziome</h2>
+                    <p>Aby stworzyć <strong>poziome menu</strong> można:</p>
+                    <ul>
+                        <li>ustawić elementy listy na <strong>display: inline-block</strong></li>
+                        <li><strong>usunąć dekorację</strong> hiperłącza</li>
+                    </ul>
+                    <pre><code>ul{
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+}
+ul a{
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    color: black;
+}</code></pre>
+                    <div id="lista2">
+                        <ul>
+                            <li><a href="#element1">element1</a></li>
+                            <li><a href="#element2">element2</a></li>
+                            <li><a href="#element3">element3</a></li>
+                            <li><a href="#element4">element4</a></li>
+                            <li><a href="#element5">element5</a></li>
+                        </ul>
+                    </div>
+                </div>
+    </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

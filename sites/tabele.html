@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabele HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - tabele w HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Co to jest tabela?</h2>
+                <p><strong>Tabela</strong> - struktura służąca do prezentacji danych w formie tabeli składającej się z wierszy i kolumn.</p>
+            </div>
+            <div class="backgr">
+                <h2>Jak stworzyć tabelę?</h2>
+                <p>Aby stworzyć tabelę, należy użyć znacznika <strong>&lt;table&gt;</strong>. Wewnątrz tabeli umieszcza się wiersze (<strong>&lt;tr&gt;</strong>) i komórki (<strong>&lt;th&gt;</strong> dla nagłówków i <strong>&lt;td&gt;</strong> dla komórek danych). Należy pamiętać o późniejszym formatowaniu wyglądu tabeli w CSS, aby nadać jej odpowiedni wygląd.</p>
+                <p>Przykładowa tabela:</p>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nagłówek 1&lt;/th&gt;
+        &lt;th&gt;Nagłówek 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Komórka 1&lt;/td&gt;
+        &lt;td&gt;Komórka 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="tabela">
+                    <table>
+                        <tr>
+                            <th>Nagłówek 1</th>
+                            <th>Nagłówek 2</th>
+                        </tr>
+                        <tr>
+                            <td>Komórka 1</td>
+                            <td>Komórka 2</td>
+                        </tr>
+                    </table>
+                    </div> 
+            </div>
+            <div class="backgr">
+                <h2>Colspan i rowspan</h2>
+                <ol>
+                    <li><strong>Colspan</strong> - atrybut, który pozwala na łączenie komórek w poziomie. Używa się go w znaczniku <strong>&lt;td&gt;</strong> lub <strong>&lt;th&gt;</strong>, aby określić, ile kolumn ma zajmować dana komórka. Na przykład: <code><strong>&lt;td colspan="2"&gt;Tekst&lt;/td&gt;</strong></code> spowoduje, że komórka zajmie dwie kolumny.</li>
+                    <li><strong>Rowspan</strong> - atrybut, który pozwala na łączenie komórek w pionie. Używa się go w znaczniku <strong>&lt;td&gt;</strong> lub <strong>&lt;th&gt;</strong>, aby określić, ile wierszy ma zajmować dana komórka. Na przykład: <code><strong>&lt;td rowspan="3"&gt;Tekst&lt;/td&gt;</strong></code> spowoduje, że komórka zajmie trzy wiersze.</li>
+                </ol>
+                <p>Przykładowa tabela z użyciem colspan i rowspan:</p>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nagłówek 1&lt;/th&gt;
+        &lt;th&gt;Nagłówek 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;Tekst&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Tekst&lt;/td&gt;
+        &lt;td&gt;Tekst&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Tekst&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                <div class="tabela">
+                    <table>
+                        <tr>
+                            <th>Nagłówek 1</th>
+                            <th>Nagłówek 2</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Tekst</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Tekst</td>
+                            <td>Tekst</td>
+                        </tr>
+                        <tr>
+                            <td>Tekst</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="backgr">
+                <h2>Tabele zagnieżdżone</h2>
+            <p><strong>Tabele zagnieżdżone</strong> - tabele, które zawierają inne tabele jako swoje elementy (tabela w tabeli). Tworzy się je poprzez umieszczenie jednej tabeli wewnątrz komórki innej tabeli.</p>
+            <p>Przykładowa tabela zagnieżdżona:</p>
+            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nagłówek 1&lt;/th&gt;
+        &lt;th&gt;Nagłówek 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Podnagłówek 1&lt;/th&gt;
+                    &lt;th&gt;Podnagłówek 2&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Podkomórka 1&lt;/td&gt;
+                    &lt;td&gt;Podkomórka 2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/td&gt;
+        &lt;td&gt;Tekst&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <div class="tabela">
+                    <table>
+                        <tr>
+                            <th>Nagłówek 1</th>
+                            <th>Nagłówek 2</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <th>Podnagłówek 1</th>
+                                        <th>Podnagłówek 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Podkomórka 1</td>
+                                        <td>Podkomórka 2</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>Tekst</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+        </div>
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+    
+</body>
+</html>

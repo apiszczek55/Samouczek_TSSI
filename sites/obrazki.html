@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrazki HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - obrazki w HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Obrazek <strong>&lt;img&gt;</strong></h2>
+                <p>W HTML <strong>obrazy</strong> są wyświetlane za pomocą znacznika <strong>&lt;img&gt;</strong>. Aby wyświetlić obraz, należy określić jego źródło oraz alternatywny opis.</p>
+
+                <ul>
+                    <li><strong>src</strong> - obowiązkowy atrybut, który określa ścieżkę do pliku obrazu (lokalizacja na dysku, gdzie znajduje się pożądany obrazek)</li>
+                    <li><strong>alt</strong> - obowiązkowy atrybut, który określa alternatywny opis obrazu, wyświetlany w przypadku jego braku, przy czytaniu screen readerem, kiedy użytkownik wyłączył jego wyświetlanie , itp.</li>
+                    <li><strong>title</strong> - określa tekst, który jest wyświetlany po najechaniu kursorem na obraz. Działa też na innych elementach HTML</li>
+                    <li><strong>width</strong> - określa szerokość obrazu</li>
+                    <li><strong>height</strong> - określa wysokość obrazu</li>
+                </ul>
+                <p>Przykład:</p>
+                <pre><code>&lt;img src="obrazek.jpg" alt="Opis obrazka" title="tekst po najechaniu kursorem" 
+width="300" height="200"&gt;</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Obraz z podpisem</h2>
+                <p>Można dodać podpis do obrazu, używając znacznika <strong>&lt;figcaption&gt;</strong> wewnątrz znacznika <strong>&lt;figure&gt;</strong>.</p>
+                <pre><code>&lt;figure&gt;
+    &lt;img src="obrazek.jpg" alt="Opis obrazka"&gt;
+    &lt;figcaption&gt;Podpis do obrazka&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                    <ul>
+                        <li><strong>&lt;figure&gt;</strong> - element, który grupuje obraz i jego podpis. Może służyć do oznaczania ilustracji, diagramów, zdjęć, wycinków kodu źródłowego itp. (blokowy)</li>
+                        <li><strong>&lt;figcaption&gt;</strong> - podpis dla obrazu, diagramu itp. (blokowy)</li>
+                    </ul>
+            </div>
+        </main>
+        </div>
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+    
+</body>
+</html>

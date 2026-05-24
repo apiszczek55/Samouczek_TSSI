@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozycjonowanie</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI -  pozycjonowanie">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Pozycjonowanie</h2>
+                <p>Właściwość <strong>position</strong> - służy do kontrolowania położenia elementów na stronie. Pozwala na precyzyjne ustawienie elementów w stosunku do ich normalnego położenia, kontenera nadrzędnego lub okna przeglądarki.</p>
+                <p>Wartości <strong>position</strong>:</p>
+                <ul>
+                    <li><strong>static</strong> - domyślne położenie elementu (nie jest pozycjonowany)</li>
+                    <li><strong>relative</strong> - element jest pozycjonowany względem swojego normalnego położenia</li>
+                    <li><strong>absolute</strong> - element jest pozycjonowany względem najbliższego kontenera nadrzędnego, który ma ustawioną właściwość position inną niż static</li>
+                    <li><strong>fixed</strong> - element jest pozycjonowany względem okna przeglądarki i nie przesuwa się podczas przewijania strony</li>
+                    <li><strong>sticky</strong> - element jest pozycjonowany względem swojego normalnego położenia, ale zmienia się na fixed po osiągnięciu określonej pozycji (np. po przewinięciu do góry strony). Przechodzi między pozycjami <strong>relative</strong> a <strong>fixed</strong> w zależności od pozycji na stronie</li>
+                </ul>
+                    <p>Właściwości <strong>left</strong>, <strong>right</strong>, <strong>top</strong> i <strong>bottom</strong> - służą do określania odległości elementu od odpowiednich krawędzi (lewej, prawej, górnej i dolnej) w zależności od wartości właściwości position (nie działają na elementy z <strong>position: static</strong>)</p>
+                    <pre><code>#obrazek{        <i>&lt;!-- element przyklejony do okna przeglądarki 50px od góry 
+i 0px od prawej  --&gt;</i>
+    position: fixed;
+    top: 50px;
+    right: 0;
+}</code></pre>
+                </div>
+                <div class="backgr">
+                    <h2>Z-index</h2>
+                    <p><strong>z-index</strong> - służy do kontrolowania kolejności nakładania się elementów (warstw) na stronie. Im wyższa wartość z-index, tym element będzie wyświetlany nad elementami o niższych wartościach z-index. Działa tylko na elementy z pozycją inną niż static.</p>
+                    <p>Wartości <strong>z-index</strong>:</p>
+                    <ul>
+                        <li><strong>auto</strong> - domyślna wartość</li>
+                        <li><strong>liczba</strong> - liczba całkowita określająca kolejność nakładania się elementów (im wyższa, tym wyżej). Możliwe są również wartości ujemne</li>
+                    </ul>
+                </div>
+    </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

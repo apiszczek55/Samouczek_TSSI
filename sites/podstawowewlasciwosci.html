@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podstawowe właściwości w CSS</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - podstawowe właściwości">
+
+    <link rel="stylesheet" href="../styles/CSS.css">
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>CSS</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="CSS1.html">Podstawy CSS</a></li>
+                <li><a href="selektory.html">Selektory</a></li>
+                <li><a href="jednostki.html">Jednostki</a></li>
+                <li><a href="podstawowewlasciwosci.html">Podstawowe właściwości</a></li>
+                <li><a href="boxmodel.html">Model pudełkowy</a></li>
+                <li><a href="listycss.html">Formatowanie list</a></li>
+                <li><a href="tabelecss.html">Formatowanie tabel</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="layout.html">Układy stron</a></li>
+                <li><a href="position.html">Pozycjonowanie</a></li>
+                <li><a href="responsywnosc.html">Responsywność</a></li>
+                <li><a href="animacje.html">Animacje</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+                <h2>Właściwości CSS</h2>
+                <p>W CSS istnieje wiele właściwości, które pozwalają na kontrolowanie wyglądu i układu elementów na stronie. Poniżej znajduje się kilka podstawowych właściwości, które są często używane.</p>
+            </div>
+            <div class="backgr">
+                <h2>Tekst</h2>
+                <p><strong>color</strong> - kolor tekstu</p>
+                <pre><code>p{
+    color: red;
+}</code></pre>
+
+                <p><strong>font-family</strong> - rodzaj czcionki. Wyrózniamy kilka rodzajów czcionek:</p>
+                <ul>
+                    <li><strong>serif</strong> - czcionki z ozdobnikami na końcach (np. "Times New Roman", Georgia). Zawyczaj używane do tekstu drukowanego</li>
+                    <li><strong>sans-serif</strong> - czcionki bez ozdobników na końcach (np. Arial, Helvetica). Zawyczaj używane do tekstu na urządzeniach cyfrowych</li>
+                    <li><strong>monospace</strong> - czcionki o stałej szerokości (np. "Courier New", Monaco). Zawyczaj używane do kodu źródłowego</li>
+                    <li><strong>cursive</strong> - czcionki przypominające pismo odruckowe (np. "Brush Script"). Są używane do dekoracji</li>
+                    <li><strong>fantasy</strong> - czcionki dekoracyjne (np. Impact, "Comic Sans MS"). Często używane do nagłówków i tytułów</li>
+                </ul>
+                <p>Warto pamiętać, aby określić kilka czcionek jako alternatywy, jeśli jedna z nich nie jest dostępna, zastosowana zostanie kolejna. Na końcu należy określić główną czcionkę, z której podane czcionki pochodzą (<strong>serif</strong>, <strong>sans-serif</strong>, <strong>monospace</strong>, <strong>cursive</strong>, <strong>fantasy</strong>). Nazwy czcionek, które składają się z wielu wyrazów, należy zapisywać w cudzysłowie.</p>
+                <pre><code>p{
+    font-family: Arial, sans-serif;
+}
+h2{
+    font-family: "Times New Roman", serif;
+}</code></pre>
+
+                <p><strong>font-size</strong> - rozmiar czcionki</p>
+                <pre><code>p{
+    font-size: 16px;
+}</code></pre>
+
+                <p><strong>font-weight</strong> - grubość czcionki</p>
+                <ul>
+                    <li><strong>normal</strong> - normalna grubość (400)</li>
+                    <li><strong>bold</strong> - pogrubiona (700)</li>
+                    <li><strong>bolder</strong> - grubsza od odziedziczonej lub przypisanej do znacznika (wartość względna)</li>
+                    <li><strong>lighter</strong> - cieńsza od odziedziczonej lub przypisanej do znacznika (wartość względna)</li>
+                    <li><strong>100-900</strong> - wartości numeryczne, gdzie 100 jest najcieńsza, a 900 jest najgrubsza</li>
+                </ul>
+                <pre><code>p{
+    font-weight: bold;
+}</code></pre>
+
+                <p><strong>font-style</strong> - styl czcionki</p>
+                <ul>
+                    <li><strong>normal</strong> - normalny styl</li>
+                    <li><strong>italic</strong> - kursywa</li>
+                    <li><strong>oblique</strong> - bardziej pochyły od kursywy</li>
+                </ul>
+                <pre><code>p{
+    font-style: italic;
+}</code></pre>
+
+                <p><strong>text-decoration-line</strong> - dekoracja tekstu</p>
+                <ul>
+                    <li><strong>none</strong> - brak dekoracji</li>
+                    <li><strong>underline</strong> - podkreślenie</li>
+                    <li><strong>overline</strong> - linia nad tekstem</li>
+                    <li><strong>line-through</strong> - przekreślenie</li>
+                </ul>
+                <p><strong>text-decoration-color</strong> - kolor dekoracji tekstu</p>
+                <p><strong>text-decoration-style</strong> - styl dekoracji tekstu</p>
+                <ul>
+                    <li><strong>solid</strong> - ciągła linia</li>
+                    <li><strong>dashed</strong> - przerywana linia</li>
+                    <li><strong>dotted</strong> - kropkowana linia</li>
+                    <li><strong>double</strong> - podwójna linia</li>
+                    <li><strong>wavy</strong> - falista linia</li>
+                </ul>
+                <p><strong>text-decoration-thickness</strong> - grubość dekoracji tekstu</p>
+                <ul>
+                    <li><strong>auto</strong></li>
+                    <li><strong>from-font</strong></li>
+                    <li><strong>jednostka</strong></li>
+                </ul>
+                <p><strong>text-decoration</strong> - skrót dla wszystkich właściwości dekoracji tekstu</p>
+                <pre><code>p{
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+}
+a{
+    text-decoration: underline blue dashed 2px;
+}</code></pre>
+
+                <p><strong>text-align</strong> - wyrównanie tekstu</p>
+                <ul>
+                    <li><strong>left</strong> - wyrównanie do lewej</li>
+                    <li><strong>right</strong> - wyrównanie do prawej</li>
+                    <li><strong>center</strong> - wyrównanie do środka</li>
+                    <li><strong>justify</strong> - wyrównanie na obie strony</li>
+                </ul>
+                <pre><code>p{
+    text-align: center;
+}</code></pre>
+
+                <p><strong>font-variant</strong> - wariant czcionki. <strong>small-caps</strong> wyświetla tekst w małych kapitalikach (wielkie litery są wyświetlane w mniejszym rozmiarze, a małe litery są zamieniane na wielkie w mniejszym rozmiarze).</p>
+                <pre><code>p{
+    font-variant: small-caps;
+}</code></pre>
+
+                <p><strong>text-shadow</strong> - cień tekstu</p>
+                <pre><code>p{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}</code></pre>
+
+                <p><strong>text-transform</strong> - transformacja tekstu</p>
+                <ul>
+                    <li><strong>none</strong> - brak transformacji</li>
+                    <li><strong>capitalize</strong> - pierwsza litera każdego słowa jest zamieniana na wielką</li>
+                    <li><strong>uppercase</strong> - wszystkie litery są zamieniane na wielkie</li>
+                    <li><strong>lowercase</strong> - wszystkie litery są zamieniane na małe</li>
+                </ul>
+                <pre><code>p{
+    text-transform: uppercase;
+}</code></pre>
+
+                <p><strong>line-height</strong> - wysokość linii (odstęp między liniami tekstu)</p>
+                <pre><code>p{
+    line-height: 1.5;
+}</code></pre>
+
+                <p><strong>letter-spacing</strong> - odstęp między literami</p>
+                <pre><code>p{
+    letter-spacing: 2px;
+}</code></pre>
+
+                <p><strong>word-spacing</strong> - odstęp między słowami</p>
+                <pre><code>p{
+    word-spacing: 2px;
+}</code></pre>
+
+                <p><strong>text-indent</strong> - wcięcie pierwszej linii tekstu</p>
+                <pre><code>p{
+    text-indent: 20px;
+}</code></pre>
+
+                <p><strong>white-space</strong> - kontroluje, jak przeglądarka obsługuje białe znaki (spacje, tabulatory, nowe linie)</p>
+                <ul>
+                    <li><strong>normal</strong> - domyślne zachowanie, białe znaki są redukowane do pojedynczych spacji, a tekst jest zawijany</li>
+                    <li><strong>nowrap</strong> - tekst nie jest zawijany</li>
+                    <li><strong>pre</strong> - białe znaki są zachowywane, a tekst nie jest zawijany (podobnie jak w elemencie <strong>&lt;pre&gt;</strong>). Tekst jest wyświetlany z zachowaniem oryginalnego formatowania jak w kodzie źródłowym</li>
+                    <li><strong>pre-wrap</strong> - białe znaki są zachowywane, a tekst jest zawijany</li>
+                    <li><strong>pre-line</strong> - białe znaki są redukowane do pojedynczych spacji, a tekst jest zawijany tylko na nowych liniach</li>
+                </ul>
+                <pre><code>p{
+    white-space: pre-wrap;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Wysokość i szerokość</h2>
+                <p><strong>width</strong> - szerokość elementu</p>
+                <p><strong>height</strong> - wysokość elementu</p>
+                <pre><code>div{
+    width: 200px;
+    height: 100px;
+}</code></pre>
+
+                <p><strong>min-width</strong> - minimalna szerokość elementu</p>
+                <p><strong>max-width</strong> - maksymalna szerokość elementu</p>
+                <pre><code>div{
+    min-width: 100px;
+    max-width: 200px;
+}</code></pre>
+
+                <p><strong>min-height</strong> - minimalna wysokość elementu</p>
+                <p><strong>max-height</strong> - maksymalna wysokość elementu</p>
+                <pre><code>div{
+    min-height: 50px;
+    max-height: 150px;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Tło</h2>
+                <p><strong>background-color</strong> - kolor tła</p>
+                <ol>
+                    <ul>
+                        <li><strong>nazwy kolorów</strong> - np. red, blue, green</li>
+                        <li><strong>RGB</strong> - rgb(255, 0, 0) dla czerwonego</li>
+                        <li><strong>RGBA</strong> - rgba(255, 0, 0, 0.5) dla półprzezroczystego czerwonego</li>
+                        <li><strong>HSL</strong> - hsl(0, 100%, 50%) dla czerwonego</li>
+                        <li><strong>HSLA</strong> - hsla(0, 100%, 50%, 0.5) dla półprzezroczystego czerwonego</li>
+                        <li><strong>heksadecymalne</strong> - #ff0000 dla czerwonego</li>
+                        <li><strong>heksadecymalne z przezroczystością</strong> - #ff000080 dla półprzezroczystego czerwonego</li>
+                        <li><strong>transparent</strong> - przezroczyste tło (domyślne)</li>
+                    </ul></li>
+                </ol>
+                <pre><code>p{
+    background-color: lightgray;
+}</code></pre>
+
+                <p><strong>background-image</strong> - obraz tła lub gradient</p>
+                <pre><code>body{
+    background-image: url('obraz.jpg');
+}</code></pre>
+
+                <p><strong>background-repeat</strong> - powtarzanie obrazu tła</p>
+                <ul>
+                    <li><strong>repeat</strong> - obraz jest powtarzany zarówno w poziomie, jak i w pionie (domyślne)</li>
+                    <li><strong>repeat-x</strong> - obraz jest powtarzany tylko w poziomie</li>
+                    <li><strong>repeat-y</strong> - obraz jest powtarzany tylko w pionie</li>
+                    <li><strong>no-repeat</strong> - obraz nie jest powtarzany</li>
+                </ul>
+                <pre><code>body{
+    background-repeat: no-repeat;
+}</code></pre>
+
+                <p><strong>background-size</strong> - rozmiar obrazu tła</p>
+                <ul>
+                    <li><strong>auto</strong> - domyślny rozmiar obrazu</li>
+                    <li><strong>cover</strong> - obraz jest skalowany, aby całkowicie pokryć tło, zachowując proporcje (może być obcięty)</li>
+                    <li><strong>contain</strong> - obraz jest skalowany, aby całkowicie zmieścić się w tle, zachowując proporcje (może pozostać puste tło)</li>
+                    <li><strong>jednostka</strong> - można określić rozmiar obrazu za pomocą jednostek (np. 100px 50px)</li>
+                </ul>
+                <pre><code>body{
+    background-size: cover;
+}</code></pre>
+
+                <p><strong>background-position</strong> - pozycja obrazu tła</p>
+                <ul>
+                    <li><strong>left</strong></li>
+                    <li><strong>center</strong></li>
+                    <li><strong>right</strong></li>
+                    <li><strong>top</strong></li>
+                    <li><strong>bottom</strong></li>
+                    <li><strong>jednostka</strong></li>
+                </ul>
+                <pre><code>body{
+    background-position: center;
+}</code></pre>
+
+                <p><strong>background-attachment</strong> - kontroluje, czy tło przewija się wraz z zawartością strony</p>
+                <ul>
+                    <li><strong>scroll</strong> - tło przewija się wraz z zawartością (domyślne)</li>
+                    <li><strong>fixed</strong> - tło jest przyklejone do okna przeglądarki i nie przewija się</li>
+                </ul>
+                <pre><code>body{
+    background-attachment: fixed;
+}</code></pre>
+
+                <p><strong>background</strong> - skrót dla wszystkich właściwości tła</p>
+                <pre><code>body{
+    background: lightgray url('obraz.jpg') no-repeat center;
+}</code></pre>
+            </div>
+            <div class="backgr">
+                <h2>Overflow</h2>
+                <p><strong>overflow</strong> - kontroluje, jak zawartość elementu jest wyświetlana, gdy przekracza jego granice (w pionie i poziomie)</p>
+                <ul>
+                    <li><strong>visible</strong> - zawartość jest wyświetlana poza granicami elementu (domyślne)</li>
+                    <li><strong>hidden</strong> - zawartość jest ukrywana poza granicami elementu</li>
+                    <li><strong>scroll</strong> - dodawane są paski przewijania, aby móc zobaczyć ukrytą część zawartości</li>
+                    <li><strong>auto</strong> - przeglądarka decyduje, czy dodać paski przewijania</li>
+                </ul>
+                <pre><code>div{
+    overflow: hidden;
+}</code></pre>
+                <p><strong>overflow-x</strong> - kontroluje przewijanie w poziomie</p>
+                <p><strong>overflow-y</strong> - kontroluje przewijanie w pionie</p>
+                <pre><code>div{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}</code></pre>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>

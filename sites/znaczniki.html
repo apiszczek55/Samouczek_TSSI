@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Znaczniki HTML</title>
+    <meta name="author" content="Alina P.">
+    <meta name="description" content="Samouczek TSSI - znaczniki w HTML">
+
+    <link rel="stylesheet" href="../styles/HTML.css">
+
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <div id="naglowek">
+                <h1>HTML</h1>
+            </div>
+            
+            <nav class="poz">
+                <ul>
+                    <li><a href="../index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="../sites/HTML1.html">HTML</a></li>
+                    <li><a href="../sites/CSS1.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="menucontent">
+<nav class="pion">
+            <ul>
+                <li><a href="HTML1.html">Podstawy HTML</a></li>
+                <li><a href="metadane.html">Metadane</a></li>
+                <li><a href="znaczniki.html">Znaczniki</a></li>
+                <li><a href="listy.html">Listy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="obrazki.html">Obrazki</a></li>
+                <li><a href="mapaodsylaczy.html">Mapa odsyłaczy</a></li>
+                <li><a href="hiperlacza.html">Hiperłącza</a></li>
+                <li><a href="formularze.html">Formularze</a></li>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="WCAG.html">WCAG</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="backgr">
+            <h2>Czym są znaczniki?</h2>
+            <p><strong>Znaczniki</strong> - definiują strukturę i układ strony internetowej (dzielą ją na elementy). Są one używane do oznaczania różnych części dokumentu, takich jak nagłówki, akapity, listy, itp.</p>
+            </div>
+            <div class="backgr">
+            <h2>Najważniejsze zasady używania znaczników:</h2>
+            <ol>
+                <li><strong>Nigdy nie krzyżuj znaczników</strong></li>
+                <li><strong>Zawsze zamykaj znaczniki kontenerowe</strong></li>
+                <li><strong>Używaj tylko małych liter</strong></li>
+                <li><strong>Używaj cudzysłowów dla atrybutów</strong></li>
+                <li><strong>Uważaj na znaki specjalne</strong></li>
+                <li><strong>Używaj znaczników zgodnie z ich przeznaczeniem</strong></li>
+                <li><strong>Nigdy nie używaj znaczników tylko do formatowania</strong></li>
+            </ol>
+            </div>
+            <div class="backgr">
+            <h2>Poddział znaczników:</h2>
+            <ol>
+                <li><strong>ZNACZNIKI BLOKOWE</strong> - elementy, które tworzą bloki na stronie i zajmują całą szerokość (np. nagłówki, akapity)</li>
+                <li><strong>ZNACZNIKI LINIOWE</strong> - elementy, które nie tworzą nowej linii (np. pogrubienie, kursywa)</li>
+            </ol>
+            <ol>
+                <li><strong>ZNACZNIKI KONTENEROWE</strong> - należy je zamykać (np. <code><strong>&lt;div&gt;</strong></code>, <code><strong>&lt;p&gt;</strong></code>)</li>
+                <li><strong>ZNACZNIKI POJEDYNCZE</strong> - nie wymagają zamknięcia (np. <code><strong>&lt;br&gt;</strong></code>, <code><strong>&lt;hr&gt;</strong></code>)</li>
+            </ol>
+            </div>
+            <div class="backgr">
+            <h2>Przykładowe znaczniki blokowe:</h2>
+            <ol>
+                <li><strong>&lt;h1&gt;</strong> - nagłówek główny (kontenerowy)</li>
+                <li><strong>&lt;h2&gt;-&lt;h6&gt;</strong> - nagłówki kolejnych stopni (kontenerowe)</li>
+                <li><strong>&lt;p&gt;</strong> - akapit/paragraf (kontenerowy)</li>
+                <li><strong>&lt;blockquote&gt;</strong> - cytat/fragment z innego źródła. Posiada atrybut <code><strong>cite="..."</strong></code> (adres cytowanej strony) (kontenerowy)</li>
+                <li><strong>&lt;dl&gt;</strong> - lista definicji (kontenerowy)</li>
+                <li><strong>&lt;dt&gt;</strong> - termin definicji (kontenerowy)</li>
+                <li><strong>&lt;dd&gt;</strong> - definicja (kontenerowy)</li>
+                <li><strong>&lt;div&gt;</strong> - kontener/pudełko na inne elementy (kontenerowy)</li>
+                <li><strong>&lt;pre&gt;</strong> - tekst wyświetlany tak, jak został zapisany w kodzie (kontenerowy)</li>
+                <li><strong>&lt;hr&gt;</strong> - pozioma linia (pojedynczy)</li>
+            </ol>
+            </div>
+            <div class="backgr">
+            <h2>Przykładowe znaczniki liniowe:</h2>
+            <ol>
+                <li><strong>&lt;strong&gt;</strong> - mocne zaznaczenie/pogrubienie (kontenerowy)</li>
+                <li><strong>&lt;em&gt;</strong> - lekkie zaznaczenie (kontenerowy)</li>
+                <li><strong>&lt;b&gt;</strong> - pogrubienie (kontenerowy)</li>
+                <li><strong>&lt;del&gt;</strong> - usunięty tekst (kontenerowy)</li>
+                <li><strong>&lt;i&gt;</strong> - wyróżnienie (kontenerowy)</li>
+                <li><strong>&lt;q&gt;</strong> - krótki, wtrącony cytat (kontenerowy)</li>
+                <li><strong>&lt;cite&gt;</strong> - tytuł dzieła (kontenerowy)</li>
+                <li><strong>&lt;code&gt;</strong> - kod komputerowy (kontenerowy)</li>
+                <li><strong>&lt;sub&gt;</strong> - indeks dolny (kontenerowy)</li>
+                <li><strong>&lt;sup&gt;</strong> - indeks górny (kontenerowy)</li>
+                <li><strong>&lt;small&gt;</strong> - mały tekst/coś mniej istotnego (kontenerowy)</li>
+                <li><strong>&lt;br&gt;</strong> - nowa linia (pojedynczy)</li>
+            </ol>
+            </div>
+            <div class="backgr">
+            <h2>Czym są encje?</h2>
+            <p><strong>Encje</strong> - specjalne znaki, które są używane do reprezentowania znaków, które nie mogą być bezpośrednio wpisane w kodzie HTML, ponieważ mogłyby zakłócić interpretację kodu. Są to np.:</p>
+            <ol>
+                <li><strong>&amp;amp;</strong> - ampersand <strong>&amp;</strong></li>
+                <li><strong>&amp;lt;</strong> - mniejszość <strong>&lt;</strong></li>
+                <li><strong>&amp;gt;</strong> - większość <strong>&gt;</strong></li>
+                <li><strong>&amp;quot;</strong> - cudzysłów <strong>&quot;</strong></li>
+                <li><strong>&amp;apos;</strong> - apostrof <strong>&apos;</strong></li>
+            </ol>
+            </div>
+            <div class="backgr">
+                <h2>Znaczniki semantyczne</h2>
+                <p>O <strong>znacznikach semantycznych</strong> wspomniano w części "Układy stron" znajdującej się w zakładce <strong>CSS</strong>.</p>
+            </div>
+        </main>
+        </div>
+        
+    <footer>
+        <p>&copy; Alina Piszczek 2026</p>
+    </footer>
+    </div>
+</body>
+</html>
